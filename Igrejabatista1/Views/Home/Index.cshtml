@@ -1,0 +1,11 @@
+﻿@model string 
+  
+<header>  
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+</header>
+<div style="text-align:center;">
+<img src="~/lib/icone_igreja_bgremove.jpg" alt="Icone Igreja Batista" width="400" height="400">
+</div>
+<footer class="border-top footer bg-black">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>

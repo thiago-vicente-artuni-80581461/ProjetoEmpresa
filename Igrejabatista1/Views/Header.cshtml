@@ -1,0 +1,40 @@
+﻿@model string
+<nav class="navbar nav-pills navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
+    <div class="container">
+        <nav class="navbar">
+            <div class="container">
+                <a>
+                    <img src="~/lib/icone_igreja_bgremove-small.jpg" alt="Icone Igreja Batista" width="40" height="40">
+                </a>
+            </div>
+        </nav>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Cadastro" asp-action="Index">Cadastro de membros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Entradas" asp-action="Index">Dízimo/Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Caixa" asp-action="Index">Caixa Igreja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Caixa" asp-action="IndexSaida">Saída</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-controller="Patrimonio" asp-action="Index">Patrimônio</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-grow-1 float-end">
+                <li class="nav-item">
+                    <h5 class="nav-link text-white nomeusuario">@Model</h5>
+                    <a class="nav-link text-danger" asp-controller="Login" asp-action="Login">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

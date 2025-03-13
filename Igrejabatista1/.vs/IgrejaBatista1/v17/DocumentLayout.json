@@ -1,0 +1,328 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Igrejabatista1\\Igrejabatista1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\repository\\caixarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\repository\\caixarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\repository\\entradarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\repository\\entradarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\repository\\icaixarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\repository\\icaixarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\services\\caixaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\services\\caixaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\services\\icaixaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\services\\icaixaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\controllers\\entradascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:controllers\\entradascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\controllers\\caixacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:controllers\\caixacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\views\\caixa\\indexsaida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:views\\caixa\\indexsaida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\views\\entradas\\cadastroentrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:views\\entradas\\cadastroentrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\views\\cadastro\\novocadastromembro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:views\\cadastro\\novocadastromembro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\views\\caixa\\cadastrosaida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:views\\caixa\\cadastrosaida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\valueobjects\\saidavo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\valueobjects\\saidavo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\views\\caixa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:views\\caixa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\services\\entradaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\services\\entradaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\services\\ientradaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\services\\ientradaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\repository\\icadastromembrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\repository\\icadastromembrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\views\\cadastro\\editarcadastromembro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:views\\cadastro\\editarcadastromembro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|c:\\igrejabatista1\\igrejabatista1\\models\\services\\icadastromembroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4705177-98C2-4D1C-89F2-1E1DC598F21F}|IgrejaBatista1.csproj|solutionrelative:models\\services\\icadastromembroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IndexSaida.cshtml",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Caixa\\IndexSaida.cshtml",
+              "RelativeDocumentMoniker": "Views\\Caixa\\IndexSaida.cshtml",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Caixa\\IndexSaida.cshtml",
+              "RelativeToolTip": "Views\\Caixa\\IndexSaida.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T17:42:00.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CaixaRepository.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\CaixaRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repository\\CaixaRepository.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\CaixaRepository.cs",
+              "RelativeToolTip": "Models\\Repository\\CaixaRepository.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAAsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T13:54:43.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CaixaController.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Controllers\\CaixaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CaixaController.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Controllers\\CaixaController.cs",
+              "RelativeToolTip": "Controllers\\CaixaController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA5wD0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T12:57:14.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EntradasController.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Controllers\\EntradasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EntradasController.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Controllers\\EntradasController.cs",
+              "RelativeToolTip": "Controllers\\EntradasController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T19:14:40.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICaixaService.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\ICaixaService.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\ICaixaService.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\ICaixaService.cs",
+              "RelativeToolTip": "Models\\Services\\ICaixaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:55:05.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CaixaService.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\CaixaService.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\CaixaService.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\CaixaService.cs",
+              "RelativeToolTip": "Models\\Services\\CaixaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:55:54.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICaixaRepository.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\ICaixaRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repository\\ICaixaRepository.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\ICaixaRepository.cs",
+              "RelativeToolTip": "Models\\Repository\\ICaixaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:56:30.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAACgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T12:54:37.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EntradaRepository.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\EntradaRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repository\\EntradaRepository.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\EntradaRepository.cs",
+              "RelativeToolTip": "Models\\Repository\\EntradaRepository.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T14:19:52.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CadastroSaida.cshtml",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Caixa\\CadastroSaida.cshtml",
+              "RelativeDocumentMoniker": "Views\\Caixa\\CadastroSaida.cshtml",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Caixa\\CadastroSaida.cshtml",
+              "RelativeToolTip": "Views\\Caixa\\CadastroSaida.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T13:23:41.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SaidaVO.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\ValueObjects\\SaidaVO.cs",
+              "RelativeDocumentMoniker": "Models\\ValueObjects\\SaidaVO.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\ValueObjects\\SaidaVO.cs",
+              "RelativeToolTip": "Models\\ValueObjects\\SaidaVO.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIA2wBcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:38:13.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NovoCadastroMembro.cshtml",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Cadastro\\NovoCadastroMembro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cadastro\\NovoCadastroMembro.cshtml",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Cadastro\\NovoCadastroMembro.cshtml",
+              "RelativeToolTip": "Views\\Cadastro\\NovoCadastroMembro.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADUAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T13:56:04.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CadastroEntrada.cshtml",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Entradas\\CadastroEntrada.cshtml",
+              "RelativeDocumentMoniker": "Views\\Entradas\\CadastroEntrada.cshtml",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Entradas\\CadastroEntrada.cshtml",
+              "RelativeToolTip": "Views\\Entradas\\CadastroEntrada.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T13:57:49.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IEntradaService.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\IEntradaService.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\IEntradaService.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\IEntradaService.cs",
+              "RelativeToolTip": "Models\\Services\\IEntradaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T20:13:12.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EntradaService.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\EntradaService.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\EntradaService.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\EntradaService.cs",
+              "RelativeToolTip": "Models\\Services\\EntradaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T20:13:25.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Caixa\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Caixa\\Index.cshtml",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Caixa\\Index.cshtml",
+              "RelativeToolTip": "Views\\Caixa\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T12:58:30.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ICadastroMembroRepository.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\ICadastroMembroRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repository\\ICadastroMembroRepository.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Repository\\ICadastroMembroRepository.cs",
+              "RelativeToolTip": "Models\\Repository\\ICadastroMembroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:36:38.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EditarCadastroMembro.cshtml",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Cadastro\\EditarCadastroMembro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cadastro\\EditarCadastroMembro.cshtml",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Views\\Cadastro\\EditarCadastroMembro.cshtml",
+              "RelativeToolTip": "Views\\Cadastro\\EditarCadastroMembro.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T13:36:59.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ICadastroMembroService.cs",
+              "DocumentMoniker": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\ICadastroMembroService.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\ICadastroMembroService.cs",
+              "ToolTip": "C:\\Igrejabatista1\\Igrejabatista1\\Models\\Services\\ICadastroMembroService.cs",
+              "RelativeToolTip": "Models\\Services\\ICadastroMembroService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:35:56.811Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

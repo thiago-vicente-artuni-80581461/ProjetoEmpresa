@@ -1,0 +1,148 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model IEnumerable<SaidaVO>
+
+<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+    <div style="background-color:black;">
+        <h5 style="color:white; margin-left:10px;">Contas à Pagar</h5>
+    </div>
+</header>
+<div class="btn-group float-end" role="group">
+    <a asp-action="CadastroSaida" asp-controller="Caixa" role="button" class="btn btn-dark">Novo</a>
+</div>
+<br />
+<br />
+<body>
+    <div class="container">
+        <form asp-action="IndexSaida" asp-controller="Caixa" method="get">
+            <div class="row mb-3">
+                <label class="col text-black">Tipo de Conta:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control w-50" name="tipoConta" id="tipoConta">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Data de Saída Início:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control w-50" name="dataSaida" id="dataSaida">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Data de Saída Fim:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control w-50" name="dataSaidaFim" id="dataSaidaFim">
+                </div>
+            </div>
+            <div class="btn-group float-end" role="group">
+                <input type="submit" class="btn btn-dark" value="Pesquisar" />
+                <button style="margin-left:10px;" onclick="LimparCampos()" class="btn btn-dark">Limpar</button>
+            </div>
+        </form>
+    </div>
+    <table class="table" style="table-layout:fixed;">
+        <thead>
+            <tr>
+                <th scope="col">Tipo do Departamento</th>
+                <th scope="col">Tipo de Conta</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data de Saída</th>
+                <th scope="col">Valor Pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.DepartamentoTipoDescricao
+                    </td>
+                    <td>
+                        @item.TipoConta
+                    </td>
+
+                    <td>
+                        @item.Descricao
+                    </td>
+
+                    <td>
+                        @item.DataSaida.ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @item.ValorPago.ToString("C")
+                    </td>
+                    <td>
+                        <a asp-action="CadastroSaida" asp-controller="Caixa" class="btn btn-success" asp-route-id="@item.Id">
+                            <i class="fas fa-edit">Editar</i>
+                        </a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerSaida(@item.Id)">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Index" asp-controller="Home" role="button" class="btn btn-dark">Voltar</a>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Atenção!!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" hidden id="idExclusao" />
+                    Tem certeza da remoção desse registro?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="ExcluirSaida()">Sim</button>
+                    <button type="button" onclick="fecharModal()" class="btn btn-primary">Não</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="border-top footer bg-black">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
+<script Script>
+       function LimparCampos(){
+        $("#membro").val("");
+    }
+      function fecharModal() {
+        $('.modal').modal('hide');
+        $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
+     }
+
+     function removerSaida(id){
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        myModal.show();
+        $("#idExclusao").val(id);
+     }
+      function ExcluirSaida(){
+        var excluir = $("#idExclusao").val();
+          $.ajax({
+                url: '/Entradas/RemoverEntrada?Id=' + excluir,
+                type: 'POST',
+                success: function(resposta) {
+                    if(resposta){
+                      location.reload();
+                      $('.modal').modal('hide');
+                      $('body').removeClass('modal-open');
+                      $('.modal-backdrop').remove();
+
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Erro: " + error);
+                }
+            });
+    }
+</script>

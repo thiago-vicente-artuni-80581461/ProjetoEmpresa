@@ -1,0 +1,78 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model SaidaVO
+
+<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+    <div style="background-color:black;">
+        <h5 style="color:white; margin-left:10px;">Contas à Pagar</h5>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <form asp-action="SalvarSaida" asp-controller="Caixa" method="post">
+            <input type="text" asp-for="@Model.Id" hidden />
+
+            <div class="row mb-3">
+                <label class="col text-black">Tipo do Departamento:</label>
+                <div class="col-sm-10">
+                    <select asp-for="DepartamentoTipoId" id="dTipo" class="form-control w-50">
+
+                        @foreach (var rol in Model.DepartamentoTipo)
+                        {
+                            if (Model.DepartamentoTipoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Tipo de Conta:</label>
+                <div class="col-sm-10">
+                    <input type="text" asp-for="TipoConta" required class="form-control w-50" name="tipoConta" id="tipoConta">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Descrição:</label>
+                <div class="col-sm-10">
+                    <textarea asp-for="TipoConta" required class="form-control w-50" name="descricao" id="descricao"></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col text-black">Data de Saída:</label>
+                <div class="col-sm-10">
+                    <input type="date" asp-format="dd/MM/yyyy" asp-for="DataSaida" required class="form-control w-50" name="dataSaida" id="dataSaida">
+                </div>
+            </div>
+           
+            <div class="row mb-3">
+                <label class="col text-black">Valor Pago (R$):</label>
+                <div class="col-sm-10">
+                    <input type="number" asp-for="ValorPago" class="form-control w-50" required id="valorPago" />
+                </div>
+            </div>
+
+            <div class="btn-group float-end" role="group">
+                <input type="submit" class="btn btn-dark" value="Salvar" />
+                <button style="margin-left:5px;" onclick="limparCampos()" class="btn btn-dark">Limpar</button>
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="IndexSaida" asp-controller="Caixa" role="button" class="btn btn-dark">Voltar</a>
+    </div>
+</body>
+
+
+<footer class="border-top footer bg-black">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
+

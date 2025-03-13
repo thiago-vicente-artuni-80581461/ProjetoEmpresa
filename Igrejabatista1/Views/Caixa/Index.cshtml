@@ -1,0 +1,50 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model IEnumerable<DepartamentoIgrejaVO>
+
+<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+    <div style="background-color:black;">
+        <h5 style="color:white; margin-left:10px;">Caixa Igreja</h5>
+    </div>
+</header>
+<br />
+<br />
+<body>
+    <table class="table" style="table-layout:fixed;">
+        <thead>
+            <tr>
+                <th scope="col">Tipo do Departamento</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.DeparamentoTipoDescricao
+                    </td>
+                    <td>
+                        @item.ValorTotal.ToString("C")
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Index" asp-controller="Home" role="button" class="btn btn-dark">Voltar</a>
+    </div>
+</body>
+
+
+<footer class="border-top footer bg-black">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
+
+<script Script>
+      function LimparCampos(){
+        $("#membro").val("");
+    }
+  
+</script>

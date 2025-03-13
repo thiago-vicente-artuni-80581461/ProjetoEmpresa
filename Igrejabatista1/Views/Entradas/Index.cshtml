@@ -1,0 +1,140 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model IEnumerable<EntradaVO>
+
+
+<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+    <div style="background-color:black;">
+        <h5 style="color:white; margin-left:10px;">Dízimos/Ofertas</h5>
+    </div>
+</header>
+<div class="btn-group float-end" role="group">
+    <a asp-action="CadastroEntrada" asp-controller="Entradas" role="button" class="btn btn-dark">Novo</a>
+</div>
+<br />
+<br />
+<body>
+    <div class="container">
+        <form asp-action="Index" asp-controller="Entradas" method="get">
+            <div class="row mb-3">
+                <label class="col text-black">Membro:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control w-50" name="membro" id="membro">
+                </div>
+            </div>
+            <div class="btn-group float-end" role="group">
+                <input type="submit" class="btn btn-dark" value="Pesquisar" />
+                <button style="margin-left:10px;" onclick="LimparCampos()" class="btn btn-dark">Limpar</button>
+            </div>
+        </form>
+    </div>
+    <table class="table" style="table-layout:fixed;">
+        <thead>
+            <tr>
+                <th scope="col">Membro</th>
+                <th scope="col">Tipo do Departamento</th>
+                <th scope="col">Tipo de Contribuição</th>
+                <th scope="col">Evento</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.MembroCadastroDescricao
+                    </td>
+                    <td>
+                        @item.DepartamentoTipoDescricao
+                    </td>
+
+                    <td>
+                        @item.TipoDescricao
+                    </td>
+
+                    <td>
+                        @item.EventoDescricao
+                    </td>
+                    <td>
+                        @item.ValorTotal.ToString("C")
+                    </td>
+                    <td>
+                        <a asp-action="CadastroEntrada" asp-controller="Entradas" class="btn btn-success" asp-route-id="@item.Id">
+                            <i class="fas fa-edit">Editar</i>
+                        </a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerEntrada(@item.Id)">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Index" asp-controller="Home" role="button" class="btn btn-dark">Voltar</a>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Atenção!!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" hidden id="idExclusao" />
+                    Tem certeza da remoção desse registro?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="ExcluirEntrada()">Sim</button>
+                    <button type="button" onclick="fecharModal()" class="btn btn-primary">Não</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<footer class="border-top footer bg-black">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
+
+<script Script>
+      function LimparCampos(){
+        $("#membro").val("");
+    }
+      function fecharModal() {
+        $('.modal').modal('hide');
+        $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
+     }
+
+     function removerEntrada(id){
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        myModal.show();
+        $("#idExclusao").val(id);
+     }
+      function ExcluirEntrada(){
+        var excluir = $("#idExclusao").val();
+          $.ajax({
+                url: '/Entradas/RemoverEntrada?Id=' + excluir,
+                type: 'POST',
+                success: function(resposta) {
+                    if(resposta){
+                      location.reload();
+                      $('.modal').modal('hide');
+                      $('body').removeClass('modal-open');
+                      $('.modal-backdrop').remove();
+
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Erro: " + error);
+                }
+            });
+    }
+</script>

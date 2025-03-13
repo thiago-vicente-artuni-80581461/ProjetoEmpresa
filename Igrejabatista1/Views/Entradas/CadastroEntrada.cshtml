@@ -1,0 +1,116 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model EntradaVO
+
+<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+    <div style="background-color:black;">
+        <h5 style="color:white; margin-left:10px;">Dízimos/Ofertas</h5>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <form asp-action="SalvarEntrada" asp-controller="Entradas" method="post">
+            <input type="text" asp-for="@Model.Id" hidden/>
+
+            <div class="row mb-3">
+                <label class="col text-black">Membro:</label>
+                <div class="col-sm-10">
+                    <select asp-for="MembroId" id="membro" class="form-control w-50">
+
+                        @foreach (var rol in Model.CadastroMembro)
+                        {
+                            if (Model.MembroId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Tipo do Departamento:</label>
+                <div class="col-sm-10">
+                    <select asp-for="DepartamentoTipoId" id="dTipo" class="form-control w-50">
+
+                        @foreach (var rol in Model.DepartamentoTipo)
+                        {
+                            if (Model.TipoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Tipo de Contribuição:</label>
+                <div class="col-sm-10">
+                    <select asp-for="TipoId" id="tipo" class="form-control w-50">
+
+                        @foreach (var rol in Model.ListaTipo)
+                        {
+                            if (Model.TipoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                  
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Evento:</label>
+                <div class="col-sm-10">
+                    <select asp-for="EventoId" id="evento" class="form-control w-50">
+
+                        @foreach (var rol in Model.Evento)
+                        {
+                            if (Model.EventoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Valor (R$):</label>
+                <div class="col-sm-10">
+                    <input type="number" asp-for="ValorTotal" class="form-control w-50" required id="valorTotal" />
+                </div>
+                <input type="number" asp-for="PerfilId" hidden />
+            </div>
+            <div class="btn-group float-end" role="group">
+                <input type="submit" class="btn btn-dark" value="Salvar" />
+                <button style="margin-left:5px;" onclick="limparCampos()" class="btn btn-dark">Limpar</button>
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Index" asp-controller="Entradas" role="button" class="btn btn-dark">Voltar</a>
+    </div>
+</body>
+
+
+<footer class="border-top footer bg-black">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
+

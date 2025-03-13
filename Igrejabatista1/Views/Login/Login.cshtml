@@ -1,0 +1,20 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model LoginVO
+
+
+<div class="text-center">
+    <img src="~/lib/icone_igreja_bgremove.jpg" alt="Icone Igreja Batista" width="140" height="140">
+    <br />
+    <form asp-controller="Login" asp-action="Logar" method="post">
+        <div class="mb-3">
+            <input asp-for="LoginUsuario" type="text" required class="form-control-sm" placeholder="Usuário" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="Senha" type="text" class="form-control-sm" required type="password" placeholder="Senha"/>
+        </div>
+
+        <button id="login" type="submit" class="btn btn-danger">Login</button>
+    </form>
+</div>
+
+
