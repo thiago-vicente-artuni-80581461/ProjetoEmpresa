@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IgrejaBatista1.Data;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.IdentityModel.Tokens;
 
 namespace IgrejaBatista1.Models.Repository
 {
@@ -16,17 +17,31 @@ namespace IgrejaBatista1.Models.Repository
         }
         public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixa(int departamentoTipoId)
         {
+            List<DepartamentoIgrejaVO> listaAtualizada = new List<DepartamentoIgrejaVO>();
             var lista = (from di in _context.DepartamentoTipo
-                         join en in _context.Entrada on di.Id equals en.DepartamentoTipoId
+                         join en in _context.Entrada on di.Id equals en.DepartamentoTipoId            
                          where (departamentoTipoId == 1 || di.Id == departamentoTipoId)
-                         group en by new { di.Nome} into a
+                         group en by new { di.Nome } into a
                          select new DepartamentoIgrejaVO
                          {
                              DeparamentoTipoDescricao = a.Key.Nome,
-                             ValorTotal = a.Sum(di => di.ValorTotal)
+                             ValorTotal = a.Sum(di => di.ValorTotal),
+                             DepartamentoTipoId = departamentoTipoId
+                            
                          });
 
-            return lista.ToList();
+            var saida = _context.Saida.Where(th => th.DepartamentoTipoId == departamentoTipoId).Sum(th => th.ValorPago);
+
+            foreach (var item in lista.ToList())
+            {
+                DepartamentoIgrejaVO departamento = new DepartamentoIgrejaVO();
+                departamento.ValorTotal = item.ValorTotal - saida;
+                departamento.DeparamentoTipoDescricao = item.DeparamentoTipoDescricao;
+
+                listaAtualizada.Add(departamento);
+            }
+
+            return listaAtualizada.ToList();
 
         }
 
@@ -76,6 +91,11 @@ namespace IgrejaBatista1.Models.Repository
             }
 
             _context.SaveChanges();
+        }
+
+        public Saida BuscarDadosSaida(int id)
+        {
+            return _context.Saida.Find(id);
         }
     }
 }

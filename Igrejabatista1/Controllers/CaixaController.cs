@@ -50,7 +50,16 @@ namespace IgrejaBatista1.Controllers
 
             if (Id != 0)
             {
-                //saida.DepartamentoTipoId = 
+                var buscarDadosSaida = _caixaService.BuscarDadosSaida(Id);
+                saida.DepartamentoTipoId = buscarDadosSaida.DepartamentoTipoId;
+                saida.Descricao = buscarDadosSaida.Descricao;
+                saida.DataCriacao = buscarDadosSaida.DataCriacao;
+                saida.DataSaida = buscarDadosSaida.DataSaida;
+                saida.ValorPago = buscarDadosSaida.ValorPago;
+                saida.TipoConta = buscarDadosSaida.TipoConta;
+                saida.Id = buscarDadosSaida.Id;
+
+
             }
 
             return View(saida);
@@ -60,6 +69,7 @@ namespace IgrejaBatista1.Controllers
         public IActionResult SalvarSaida(SaidaVO saida)
         {
             _caixaService.SalvarSaida(saida);
+
             return RedirectToAction("IndexSaida", "Caixa");
         }
     }

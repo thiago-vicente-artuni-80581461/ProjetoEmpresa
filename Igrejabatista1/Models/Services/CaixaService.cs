@@ -26,5 +26,10 @@ namespace IgrejaBatista1.Models.Services
         {
            _caixaRepository.SalvarSaida(saida);
         }
+
+        public Saida BuscarDadosSaida(int id)
+        {
+            return _caixaRepository.BuscarDadosSaida(id);
+        }
     }
 }

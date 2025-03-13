@@ -136,10 +136,10 @@ namespace IgrejaBatista1.Models.Repository
             _context.SaveChanges();
         }
 
-        public IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo( int perfilId, int departamentoId)
+        public IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(int perfilId, int departamentoId)
         {
-           
-            var tipo = (from d in _context.DepartamentoTipo 
+
+            var tipo = (from d in _context.DepartamentoTipo
                         join p in _context.Perfil on d.Id equals p.DepartamentoTipoId
                         where (departamentoId == 1 || (p.Id == perfilId && p.DepartamentoTipoId == departamentoId))
                         select d).ToList();
@@ -179,5 +179,6 @@ namespace IgrejaBatista1.Models.Repository
             _context.Remove(entrada);
             _context.SaveChanges();
         }
+
     }
 }

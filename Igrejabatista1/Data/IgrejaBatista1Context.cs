@@ -30,6 +30,8 @@ public class IgrejaBatista1Context : DbContext
 
     public DbSet<Saida> Saida { get; set; }
 
+    public DbSet<DepartamentoIgreja> DepartamentoIgreja { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
