@@ -32,6 +32,20 @@
                 </div>
             </div>
             <div class="row mb-3">
+                <label class="col text-black">Mês:</label>
+                <div class="col-sm-10">
+                    <input type="number" asp-for="Mes" min="1" max="12" maxlength="2" class="form-control w-50" required id="mes" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col text-black">Ano:</label>
+                <div class="col-sm-10">
+                    <input type="number" min="1900" max="2099" step="1" asp-for="Ano" maxlength="4" class="form-control w-50" required id="ano" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
                 <label class="col text-black">Tipo do Departamento:</label>
                 <div class="col-sm-10">
                     <select asp-for="DepartamentoTipoId" id="dTipo" class="form-control w-50">
@@ -110,7 +124,7 @@
 </body>
 
 
-<footer class="border-top footer bg-black">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     @Html.Partial("~/Views/Footer.cshtml")
 </footer>
 

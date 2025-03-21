@@ -19,5 +19,7 @@ namespace IgrejaBatista1.Models
 
         [Column("DataCriacao")]
         public DateTime DataCriacao { get; set; }
+
+        public string DepartamentoTipoDescricao { get; set; }
     }
 }

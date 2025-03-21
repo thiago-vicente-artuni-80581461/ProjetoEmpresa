@@ -17,7 +17,7 @@ namespace IgrejaBatista1.Models.Services
             return _caixaRepository.RecuperarListaCaixa(departamentoTipoId);
         }
 
-        public IEnumerable<SaidaVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim)
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim)
         {
             return _caixaRepository.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida, dataSaidaFim);
         }

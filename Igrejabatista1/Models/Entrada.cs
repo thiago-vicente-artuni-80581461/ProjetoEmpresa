@@ -35,5 +35,13 @@ namespace IgrejaBatista1.Models
         [Column("PerfilId")]
         [Required]
         public int PerfilId { get; set; }
+
+        [Column("Mes")]
+        [Required]
+        public int? Mes { get; set; }
+
+        [Column("Ano")]
+        [Required]
+        public int? Ano { get; set; }
     }
 }

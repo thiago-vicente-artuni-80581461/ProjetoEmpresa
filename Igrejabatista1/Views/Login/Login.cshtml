@@ -10,10 +10,17 @@
             <input asp-for="LoginUsuario" type="text" required class="form-control-sm" placeholder="Usuário" />
         </div>
         <div class="mb-3">
-            <input asp-for="Senha" type="text" class="form-control-sm" required type="password" placeholder="Senha"/>
+            <input asp-for="Senha" type="text" class="form-control-sm" required type="password" placeholder="Senha" />
         </div>
 
         <button id="login" type="submit" class="btn btn-danger">Login</button>
+
+        @if (Model != null && Model.Mensagem != null)
+        {
+            <div class="mb-3">
+                <label id="mensagemErro" style="color:red; text-align:center; font-size:14px;">@Model.Mensagem</label>
+            </div>
+        }
     </form>
 </div>
 

@@ -21,9 +21,16 @@ namespace IgrejaBatista1.Controllers
             LoginService = loginService;
         }
 
-        public IActionResult Login()
+        [HttpGet]
+        public IActionResult Login(string mensagem = "")
         {
-            return View();
+            LoginVO login = new LoginVO();
+
+            if (!string.IsNullOrEmpty(mensagem))
+            {
+                login.Mensagem = mensagem;
+            }
+            return View(login);
         }
 
         [HttpPost]
@@ -44,7 +51,9 @@ namespace IgrejaBatista1.Controllers
                     HttpContext.Session.SetString(SessionNome, login.LoginUsuario);
                     return RedirectToAction("Index", "Home");
                 }
-                return RedirectToAction("Login", "Login");
+                var mensagem = "Usuário e/ou senha inválidos!!! Por favor, tente novamente!!!";
+          
+                return RedirectToAction("Login", "Login", new { mensagem });
             }
             catch (ValidationException)
             {

@@ -61,6 +61,8 @@ namespace IgrejaBatista1.Controllers
                 entrada.DepartamentoTipoId = recuperarInformacoesEntrada.DepartamentoTipoId;
                 entrada.EventoId = recuperarInformacoesEntrada.EventoId;  
                 entrada.ValorTotal = recuperarInformacoesEntrada.ValorTotal;
+                entrada.Mes = recuperarInformacoesEntrada.Mes;
+                entrada.Ano = recuperarInformacoesEntrada.Ano;
             }
             return View(entrada);
         }

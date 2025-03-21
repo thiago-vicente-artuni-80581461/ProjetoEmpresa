@@ -1,4 +1,5 @@
 ﻿using IgrejaBatista1.Models;
+using IgrejaBatista1.Models.ValueObjects;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -30,7 +31,9 @@ public class IgrejaBatista1Context : DbContext
 
     public DbSet<Saida> Saida { get; set; }
 
-    public DbSet<DepartamentoIgreja> DepartamentoIgreja { get; set; }
+    public DbSet<SaidaDadosVO> SaidaVO { get; set; }
+
+    public DbSet<DepartamentoIgrejaVO> DepartamentoIgreja { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

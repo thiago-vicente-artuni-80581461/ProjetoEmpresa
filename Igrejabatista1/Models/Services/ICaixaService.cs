@@ -7,7 +7,7 @@ namespace IgrejaBatista1.Models.Services
     {
         Saida BuscarDadosSaida(int id);
         IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixa(int departamentoTipoId);
-        IEnumerable<SaidaVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim);
+        IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim);
         void SalvarSaida(SaidaVO saida);
     }
 }

@@ -12,8 +12,9 @@ namespace IgrejaBatista1.Models.ValueObjects
         public DateTime DataCriacao { get; set; }
         public decimal ValorTotal { get; set; }
         public int DepartamentoTipoId { get; set; }
-
         public int PerfilId { get; set; }
+        public int? Mes { get; set; }
+        public int? Ano { get; set; }
         public IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ListaTipo { get; set; }
 
         public IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> Evento { get; set; }

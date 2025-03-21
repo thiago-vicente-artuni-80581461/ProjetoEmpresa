@@ -15,12 +15,7 @@
     <link rel="icon" type="image/x-icon" href="/icone_igreja_bgremove-small.ico">
 </head>
 <body class="bodyBackground">
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @RenderBody()
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -56,7 +56,9 @@ namespace IgrejaBatista1.Models.Repository
                         TipoDescricao = t.Tipo,
                         EventoDescricao = v.Nome,
                         ValorTotal = e.ValorTotal,
-                        DepartamentoTipoDescricao = d.Nome
+                        DepartamentoTipoDescricao = d.Nome,
+                        Mes = e.Mes,
+                        Ano = e.Ano
                     }).ToList();
 
         }
@@ -122,7 +124,9 @@ namespace IgrejaBatista1.Models.Repository
                 EventoId = entradaVO.EventoId == 0 ? null : entradaVO.EventoId,
                 ValorTotal = entradaVO.ValorTotal,
                 DepartamentoTipoId = entradaVO.DepartamentoTipoId,
-                PerfilId = entradaVO.PerfilId
+                PerfilId = entradaVO.PerfilId,
+                Mes = entradaVO.Mes,
+                Ano = entradaVO.Ano
             };
             if (entradaVO.Id != 0)
             {

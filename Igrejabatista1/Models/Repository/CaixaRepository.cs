@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using IgrejaBatista1.Data;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace IgrejaBatista1.Models.Repository
@@ -17,58 +19,19 @@ namespace IgrejaBatista1.Models.Repository
         }
         public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixa(int departamentoTipoId)
         {
-            List<DepartamentoIgrejaVO> listaAtualizada = new List<DepartamentoIgrejaVO>();
-            var lista = (from di in _context.DepartamentoTipo
-                         join en in _context.Entrada on di.Id equals en.DepartamentoTipoId            
-                         where (departamentoTipoId == 1 || di.Id == departamentoTipoId)
-                         group en by new { di.Nome } into a
-                         select new DepartamentoIgrejaVO
-                         {
-                             DeparamentoTipoDescricao = a.Key.Nome,
-                             ValorTotal = a.Sum(di => di.ValorTotal),
-                             DepartamentoTipoId = departamentoTipoId
-                            
-                         });
-
-            var saida = _context.Saida.Where(th => th.DepartamentoTipoId == departamentoTipoId).Sum(th => th.ValorPago);
-
-            foreach (var item in lista.ToList())
-            {
-                DepartamentoIgrejaVO departamento = new DepartamentoIgrejaVO();
-                departamento.ValorTotal = item.ValorTotal - saida;
-                departamento.DeparamentoTipoDescricao = item.DeparamentoTipoDescricao;
-
-                listaAtualizada.Add(departamento);
-            }
-
-            return listaAtualizada.ToList();
+            return _context.DepartamentoIgreja.FromSqlRaw("EXEC DadosCaixaIgreja @departamentoTipoId", new SqlParameter("@departamentoTipoId", departamentoTipoId)).ToList();
 
         }
 
-        public IEnumerable<SaidaVO> RecuperarListaSaida(int departamentoTipoId , string tipoConta, string dataSaida, string dataSaidaFim)
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim)
         {
-            var lista = (from di in _context.Saida
-                         join en in _context.DepartamentoTipo on di.DepartamentoTipoId equals en.Id
-                         where ((departamentoTipoId == 1 || di.Id == departamentoTipoId) ||
-                               (string.IsNullOrEmpty(tipoConta) || di.TipoConta.Contains((tipoConta))) ||
-                               (string.IsNullOrEmpty(dataSaida) || di.DataSaida >= Convert.ToDateTime(dataSaida)) ||
-                               (string.IsNullOrEmpty(dataSaidaFim) || di.DataSaida <= Convert.ToDateTime(dataSaidaFim)))
-                         select new SaidaVO
-                         {
-                             DepartamentoTipoDescricao = en.Nome,
-                             Id = di.Id,
-                             Descricao = di.Descricao,
-                             TipoConta = di.TipoConta,
-                             DepartamentoTipoId = di.DepartamentoTipoId,
-                             ValorPago = di.ValorPago,
-                             DataCriacao = di.DataCriacao,
-                             DataSaida = di.DataSaida
-                         });
-
-            return lista.ToList();
-
+            return _context.SaidaVO.FromSqlRaw("EXEC BuscarDadosSaida @DepartamentoTipoId, @TipoConta, @DataSaida, @DataSaidaFim", 
+                 new SqlParameter("@DepartamentoTipoId", departamentoTipoId),
+                 new SqlParameter("@TipoConta", tipoConta),
+                 new SqlParameter("@DataSaida", dataSaida),
+                 new SqlParameter("@DataSaidaFim", dataSaidaFim)).ToList();
         }
-
+    
         public void SalvarSaida(SaidaVO saidaVO)
         {
             Saida saida = new Saida
