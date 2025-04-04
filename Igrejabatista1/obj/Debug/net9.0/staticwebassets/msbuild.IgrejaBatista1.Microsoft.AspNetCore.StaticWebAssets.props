@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>df37t0ute7</Fingerprint>
-      <Integrity>GWo3ejXexC9modNTEjpXf3L4tjUe7PWXE86IF28E42w=</Integrity>
+      <Fingerprint>8aa7r5o271</Fingerprint>
+      <Integrity>MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -948,8 +948,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sqbd1v5n3c</Fingerprint>
-      <Integrity>TPZsoWpM/HqMFpFCoVFDP2ODlHBqsqF5W6Dit3aHPb0=</Integrity>
+      <Fingerprint>h0g9mjdth2</Fingerprint>
+      <Integrity>rzRxQ9uoRQu18fL1f/JeH69xJVLT/ZZQwWPNiXTwBE4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\icone_igreja_bgremove-small.jpg'))</OriginalItemSpec>
@@ -1223,6 +1223,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>IgrejaBatista1</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/IgrejaBatista1</BasePath>
+      <RelativePath>uploads/65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3039oqhfqg</Fingerprint>
+      <Integrity>jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>IgrejaBatista1</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/IgrejaBatista1</BasePath>
+      <RelativePath>uploads/e7865654-751b-45c4-83c3-466dd387b1f7.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vwi5q2h9rl</Fingerprint>
+      <Integrity>AR89gS4AekPgdNZjesYCHpHhYLxdm1XZ0oYBO/ghkj4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
