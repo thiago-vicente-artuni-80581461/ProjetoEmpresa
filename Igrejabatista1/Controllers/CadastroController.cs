@@ -46,7 +46,12 @@ namespace IgrejaBatista1.Controllers
         public IActionResult NovoCadastroMembro()
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
-            return View();
+
+            CadastroMembrosVO novo = new CadastroMembrosVO();
+
+            novo.Cargo = _cadastroMembroService.RecuperarListaCargos();
+
+            return View(novo);
         }
 
         [HttpPost]
@@ -73,7 +78,20 @@ namespace IgrejaBatista1.Controllers
 
                 if (registro != null)
                 {
-                    _cadastroMembroService.ExcluirCadastroMembro(registro);
+                    CadastroMembrosVO vo = new CadastroMembrosVO()
+                    {
+                        Id = registro.Id,
+                        CargoId = registro.CargoId,
+                        CPF = registro.CPF,
+                        DataBatismo = registro.DataBatismo,
+                        DataEmissao = registro.DataEmissao,
+                        DataNascimento = registro.DataNascimento,
+                        NomeCompleto = registro.NomeCompleto,
+                        NomeMae = registro.NomeMae,
+                        NomePai = registro.NomePai,
+                        RG = registro.RG
+                    };
+                    _cadastroMembroService.ExcluirCadastroMembro(vo);
                 }
                 return Json(true);
             }
@@ -91,7 +109,22 @@ namespace IgrejaBatista1.Controllers
                 var lista = _cadastroMembroService.RecuperarListaMembros();
                 var registro = lista.FirstOrDefault(th => th.Id == id);
 
-                return View(registro);
+                CadastroMembrosVO vo = new CadastroMembrosVO()
+                {
+                    Id = registro.Id,
+                    CargoId = registro.CargoId,
+                    CPF = registro.CPF,
+                    DataBatismo = registro.DataBatismo,
+                    DataEmissao = registro.DataEmissao,
+                    DataNascimento = registro.DataNascimento,
+                    NomeCompleto = registro.NomeCompleto,
+                    NomeMae = registro.NomeMae,
+                    NomePai = registro.NomePai,
+                    RG = registro.RG
+                };
+                vo.Cargo = _cadastroMembroService.RecuperarListaCargos();
+
+                return View(vo);
             }
             catch (ValidationException)
             {

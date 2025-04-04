@@ -30,6 +30,9 @@ builder.Services.AddTransient<IEntradaRepository, EntradaRepository>();
 builder.Services.AddTransient<ICaixaService, CaixaService>();
 builder.Services.AddTransient<ICaixaRepository, CaixaRepository>();
 
+builder.Services.AddTransient<IPatrimonioService, PatrimonioService>();
+builder.Services.AddTransient<IPatrimonioRepository, PatrimonioRepository>();
+
 builder.Services.AddControllers();
 builder.Services.AddDistributedMemoryCache();
 

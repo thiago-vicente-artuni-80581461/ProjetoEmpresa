@@ -16,9 +16,9 @@ namespace IgrejaBatista1.Models.Services
             return _entradaRepository.RecuperarDadosCadastroMembro();
         }
 
-        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId)
+        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro)
         {
-            return _entradaRepository.RecuperarListaEntrada(perfilId, departamentoTipoId);
+            return _entradaRepository.RecuperarListaEntrada(perfilId, departamentoTipoId, mes, ano, membro);
         }
 
         public IEnumerable<SelectListItem> RecuperarDadosContribuicaoTipo()

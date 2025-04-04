@@ -53,9 +53,22 @@ namespace IgrejaBatista1.Models.Repository
              {
                  Id = pl.PerfilId,
                  DepartamentoTipoId = p.DepartamentoTipoId
-             }).FirstOrDefault();
+             }).FirstOrDefault();     
+        }
 
-            
+        public void SalvarRegistroAcesso(LoginVO login)
+        {
+            var loginR = _context.Login.FirstOrDefault(th => th.LoginUsuario == login.LoginUsuario);
+
+            RegistroAcesso novo = new RegistroAcesso()
+            {
+                LoginId = loginR.Id,
+                Usuario = login.LoginUsuario,
+                DataRegistro = DateTime.Now
+            };
+
+            _context.RegistroAcesso.Add(novo);
+            _context.SaveChanges();
         }
     }
 }

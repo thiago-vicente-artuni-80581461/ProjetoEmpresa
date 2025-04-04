@@ -1,5 +1,6 @@
 ﻿using IgrejaBatista1.Models.Repository;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace IgrejaBatista1.Models.Services
 {
@@ -11,7 +12,7 @@ namespace IgrejaBatista1.Models.Services
             _cadastroMembroRepository = cadastroMembroRepository;
         }
 
-        public List<CadastroMembro> RecuperarListaMembros()
+        public List<CadastroMembrosVO> RecuperarListaMembros()
         {
             return _cadastroMembroRepository.RecuperarListaMembros();
         }
@@ -20,9 +21,14 @@ namespace IgrejaBatista1.Models.Services
             _cadastroMembroRepository.SalvarCadastroMembro(cadastroMembro);
         }
 
-        public void ExcluirCadastroMembro(CadastroMembro cadastroMembro)
+        public void ExcluirCadastroMembro(CadastroMembrosVO cadastroMembro)
         {
             _cadastroMembroRepository.ExcluirCadastroMembro(cadastroMembro);
+        }
+
+        public IEnumerable<SelectListItem> RecuperarListaCargos()
+        {
+           return _cadastroMembroRepository.RecuperarListaCargos();
         }
     }
 }

@@ -17,85 +17,97 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = IgrejaBatista1
 build_property.RootNamespace = IgrejaBatista1
-build_property.ProjectDir = C:\Users\Usuario\Source\Repos\ProjetoEmpresa\Igrejabatista1\
+build_property.ProjectDir = C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Usuario\Source\Repos\ProjetoEmpresa\Igrejabatista1
+build_property.MSBuildProjectDirectory = C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Cadastro/EditarCadastroMembro.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Cadastro/EditarCadastroMembro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cRWRpdGFyQ2FkYXN0cm9NZW1icm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Cadastro/Index.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Cadastro/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Cadastro/NovoCadastroMembro.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Cadastro/NovoCadastroMembro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cTm92b0NhZGFzdHJvTWVtYnJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Caixa/CadastroSaida.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Caixa/CadastroSaida.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FpeGFcQ2FkYXN0cm9TYWlkYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Caixa/Index.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Caixa/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FpeGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Caixa/IndexSaida.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Caixa/IndexSaida.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FpeGFcSW5kZXhTYWlkYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Entradas/CadastroEntrada.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Entradas/CadastroEntrada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmFkYXNcQ2FkYXN0cm9FbnRyYWRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Entradas/Index.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Entradas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmFkYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Footer.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Header.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Home/Index.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Login/Login.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/Error.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Patrimonio/CadastroPatrimonio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cmltb25pb1xDYWRhc3Ryb1BhdHJpbW9uaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Patrimonio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cmltb25pb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Relatorio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/_ViewImports.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/_ViewStart.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Source/Repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/_Layout.cshtml]
+[C:/Users/Usuario/source/repos/ProjetoEmpresa/Igrejabatista1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zx36ydy99a

@@ -6,7 +6,8 @@ namespace IgrejaBatista1.Models.Repository
     {
         Saida BuscarDadosSaida(int id);
         IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixa(int departamentoTipoId);
-        IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim);
+        IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixaRelatorio(int departamentoTipoId, int? mes, int? ano);
+        IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida);
         void SalvarSaida(SaidaVO saida);
     }
 }

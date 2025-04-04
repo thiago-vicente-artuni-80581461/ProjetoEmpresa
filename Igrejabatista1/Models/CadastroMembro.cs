@@ -46,5 +46,8 @@ namespace IgrejaBatista1.Models
 
         [Column("DataEmissao")]
         public DateTime DataEmissao { get; set; }
+
+        [Column("CargoId")]
+        public int? CargoId { get; set; }
     }
 }

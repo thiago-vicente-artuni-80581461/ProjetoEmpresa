@@ -3,56 +3,59 @@
 
 <header>
     @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
-    <div style="background-color:black;">
-        <h5 style="color:white; margin-left:10px;">Caixa Igreja</h5>
-    </div>
 </header>
 <br />
 <br />
-<body>
-    <table class="table" style="table-layout:fixed;">
-        <thead>
-            <tr>
-                <th scope="col">Tipo do Departamento</th>
-                <th scope="col">Total de Dízimos/Ofertas</th>
-                <th scope="col">Total de Conta Paga</th>
-                <th scope="col">Total Caixa</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<br />
+<div style="background-color:#212529;">
+    <h5 style="color:white; margin-left:10px;">Caixa da Igreja</h5>
+</div>
+<br />
+    <body>
+    <table class="custom-table" style="min-height:30%; height:60%;">
+            <thead>
                 <tr>
-                    <td>
-                        @item.DepartamentoTipoDescricao
-                    </td>
-                    <td>
-                        @item.ValorReceita.ToString("C")
-                    </td>
-                    <td>
-                        @item.ValorContas.ToString("C")
-                    </td>
-                    <td>
-                        @item.ValorTotal.ToString("C")
-                    </td>
+                    <th scope="col">Tipo do Departamento</th>
+                    <th scope="col">Total de Dízimos/Ofertas</th>
+                    <th scope="col">Total de Conta Paga</th>
+                    <th scope="col">Total Caixa</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.DepartamentoTipoDescricao
+                        </td>
+                        <td>
+                            @item.ValorReceita.ToString("C")
+                        </td>
+                        <td>
+                            @item.ValorContas.ToString("C")
+                        </td>
+                        <td>
+                            @item.ValorTotal.ToString("C")
+                        </td>
+                    </tr>
+                }
 
-        </tbody>
-    </table>
-    <div class="col-lg-12" style="text-align: left;">
-        <a asp-action="Index" asp-controller="Home" role="button" class="btn btn-dark">Voltar</a>
-    </div>
-</body>
+            </tbody>
+        </table>
+        <div class="col-lg-12" style="text-align: left;">
+            <a asp-action="Index" asp-controller="Home" style="margin-left:5px;" role="button" class="btn btn-dark">Voltar</a>
 
+        </div>
+    </body>
 
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    @Html.Partial("~/Views/Footer.cshtml")
-</footer>
-
+    <br />
+    <footer class="footer">
+        @Html.Partial("~/Views/Footer.cshtml")
+    </footer>
+</div>
 <script Script>
       function LimparCampos(){
         $("#membro").val("");
     }
-  
+
 </script>

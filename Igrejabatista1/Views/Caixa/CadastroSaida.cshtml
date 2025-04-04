@@ -3,10 +3,18 @@
 
 <header>
     @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
-    <div style="background-color:black;">
-        <h5 style="color:white; margin-left:10px;">Contas à Pagar</h5>
-    </div>
 </header>
+<br />
+<br />
+<br />
+<div style="background-color:#212529;">
+    <h5 style="color:white; margin-left:10px;">Cadastro de Saídas</h5>
+</div>
+<div class="btn-group float-end" role="group">
+    <a asp-action="NovoCadastroMembro" asp-controller="Cadastro" role="button" class="btn btn-dark">Novo</a>
+</div>
+<br />
+<br />
 <body>
     <div class="container">
         <form asp-action="SalvarSaida" asp-controller="Caixa" method="post">
@@ -43,14 +51,19 @@
                     <textarea asp-for="Descricao" required class="form-control w-50" name="descricao" id="descricao"></textarea>
                 </div>
             </div>
-
             <div class="row mb-3">
                 <label class="col text-black">Data de Saída:</label>
                 <div class="col-sm-10">
-                    <input type="date" asp-for="DataSaida" required class="form-control w-50" name="dataSaida" id="dataSaida">
+                    @if (Model.DataSaida.ToString() != "01/01/0001 00:00:00")
+                    {
+                        <input type="date" asp-for="DataSaida" required class="form-control w-50" name="dataSaida" id="dataSaida">
+                    }
+                    else
+                    {
+                        <input type="date" asp-format="dd/MM/yyyy" asp-for="DataSaida" required class="form-control w-50" name="dataSaida" id="dataSaida">
+                    }
                 </div>
             </div>
-           
             <div class="row mb-3">
                 <label class="col text-black">Valor Pago (R$):</label>
                 <div class="col-sm-10">
@@ -71,8 +84,17 @@
     </div>
 </body>
 
-
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<br />
+<footer class="footer">
     @Html.Partial("~/Views/Footer.cshtml")
 </footer>
 
+<script Script>
+    function limparCampos(){
+        $("#tipoConta").val("");
+        $("#descricao").val("");
+        $("#dTipo").val(0);
+        $("#dataSaida").val("");
+        $("#valorPago").val("");
+    }
+</script>

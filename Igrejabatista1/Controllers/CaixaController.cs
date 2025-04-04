@@ -29,12 +29,12 @@ namespace IgrejaBatista1.Controllers
         }
 
         [HttpGet]
-        public IActionResult IndexSaida(string tipoConta, string dataSaida, string dataSaidaFim)
+        public IActionResult IndexSaida(string tipoConta, string dataSaida)
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
             int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
             int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-            var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida, dataSaidaFim);
+            var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
 
             return View(lista);
         }
@@ -44,6 +44,7 @@ namespace IgrejaBatista1.Controllers
         public IActionResult CadastroSaida([FromRoute] int Id)
         {
             SaidaVO saida = new SaidaVO();
+            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
             int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
             int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
             saida.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);

@@ -7,7 +7,7 @@ namespace IgrejaBatista1.Models.ValueObjects
     {
         public int Id { get; set; }
         public int? TipoId { get; set; }
-        public int MembroId { get; set; }
+        public int? MembroId { get; set; }
         public int? EventoId { get; set; }
         public DateTime DataCriacao { get; set; }
         public decimal ValorTotal { get; set; }

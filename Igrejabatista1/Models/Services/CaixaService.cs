@@ -17,9 +17,9 @@ namespace IgrejaBatista1.Models.Services
             return _caixaRepository.RecuperarListaCaixa(departamentoTipoId);
         }
 
-        public IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string dataSaidaFim)
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida)
         {
-            return _caixaRepository.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida, dataSaidaFim);
+            return _caixaRepository.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
         }
 
         public void SalvarSaida(SaidaVO saida)
@@ -30,6 +30,11 @@ namespace IgrejaBatista1.Models.Services
         public Saida BuscarDadosSaida(int id)
         {
             return _caixaRepository.BuscarDadosSaida(id);
+        }
+
+        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        {
+            return _caixaRepository.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano);
         }
     }
 }

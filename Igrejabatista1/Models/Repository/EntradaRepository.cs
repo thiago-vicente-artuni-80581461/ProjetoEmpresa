@@ -41,14 +41,17 @@ namespace IgrejaBatista1.Models.Repository
             return Membros.ToList();
         }
 
-        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId)
+        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro)
         {
             return (from e in _context.Entrada
                     join d in _context.DepartamentoTipo on e.DepartamentoTipoId equals d.Id
                     from t in _context.Tipo.Where(ma => ma.Id == e.TipoId).DefaultIfEmpty()
-                    join c in _context.CadastroMembro on e.MembroId equals c.Id
+                    from c in _context.CadastroMembro.Where(cm => cm.Id == e.MembroId).DefaultIfEmpty()
                     from v in _context.Evento.Where(ma => ma.Id == e.EventoId).DefaultIfEmpty()
-                    where departamentoTipoId == 1 || (e.PerfilId == perfilId && e.DepartamentoTipoId == departamentoTipoId)
+                    where departamentoTipoId == 1 || (e.PerfilId == perfilId && e.DepartamentoTipoId == departamentoTipoId) &&
+                          (mes == null || e.Mes == mes) &&
+                          (ano == null || e.Ano == ano) &&
+                          (string.IsNullOrEmpty(membro) || c.NomeCompleto.Contains(membro))
                     select new EntradaVO
                     {
                         Id = e.Id,
@@ -119,7 +122,7 @@ namespace IgrejaBatista1.Models.Repository
             {
                 Id = entradaVO.Id,
                 DataCriacao = DateTime.Now,
-                MembroId = entradaVO.MembroId,
+                MembroId = entradaVO.MembroId == 0 ? null : entradaVO.MembroId,
                 TipoId = entradaVO.TipoId == 0 ? null : entradaVO.TipoId,
                 EventoId = entradaVO.EventoId == 0 ? null : entradaVO.EventoId,
                 ValorTotal = entradaVO.ValorTotal,

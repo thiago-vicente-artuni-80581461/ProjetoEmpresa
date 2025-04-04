@@ -1,13 +1,20 @@
-﻿@model CadastroMembro
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model CadastroMembrosVO
 
 <header>
     @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
-
-    <div style="background-color:black;">
-        <h5 style="color:white; margin-left:10px;">Formulário de Cadastro de Membros</h5>
-    </div>
 </header>
-
+<br />
+<br />
+<br />
+<div style="background-color:#212529;">
+    <h5 style="color:white; margin-left:10px;">Cadastro de Membros</h5>
+</div>
+<div class="btn-group float-end" role="group">
+    <a asp-action="NovoCadastroMembro" asp-controller="Cadastro" role="button" class="btn btn-dark">Novo</a>
+</div>
+<br />
+<br />
 <body>
     <div class="container">
         <form asp-action="SalvarCadastro" asp-controller="Cadastro" method="post">
@@ -54,6 +61,25 @@
                     <input type="date" asp-for="DataBatismo" required class="form-control w-50" name="dataBatismo" id="dataBatismo">
                 </div>
             </div>
+            <div class="row mb-3">
+                <label class="col text-black">Cargo:</label>
+                <div class="col-sm-10">
+                    <select asp-for="CargoId" id="cargo" class="form-control w-50">
+
+                        @foreach (var rol in Model.Cargo)
+                        {
+                            if (Model.CargoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
             <div class="btn-group float-end" role="group">
                 <input type="submit" class="btn btn-dark" value="Salvar" />
             </div>
@@ -66,7 +92,7 @@
         <a asp-action="Index" asp-controller="Cadastro" role="button" class="btn btn-dark">Voltar</a>
     </div>
 </body>
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<footer class="footer">
     @Html.Partial("~/Views/Footer.cshtml")
 </footer>
 

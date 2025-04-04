@@ -20,5 +20,10 @@ namespace IgrejaBatista1.Models.Services
         {
             return LoginRepository.RecuperarLoginPerfil(loginUsuario);
         }
+
+        public void SalvarRegistroAcesso(LoginVO login)
+        {
+            LoginRepository.SalvarRegistroAcesso(login);
+        } 
     }
 }

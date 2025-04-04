@@ -1,0 +1,126 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model CadastroPatrimonioVO
+
+<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+</header>
+<br />
+<br />
+<br />
+<div style="background-color:#212529;">
+    <h5 style="color:white; margin-left:10px;">Cadastro de Patrimônio</h5>
+</div>
+<div class="btn-group float-end" role="group">
+    <a asp-action="NovoCadastroMembro" asp-controller="Cadastro" role="button" class="btn btn-dark">Novo</a>
+</div>
+<br />
+<br />
+<body>
+    <div class="container">
+        <form asp-action="SalvarPatrimonio" asp-controller="Patrimonio" enctype="multipart/form-data" method="post">
+            <input type="text" asp-for="@Model.Id" hidden />
+
+
+            <div class="row mb-3">
+                <label class="col text-black">Tipo do Departamento:</label>
+                <div class="col-sm-10">
+                    <select asp-for="DepartamentoTipoId" id="dTipo" class="form-control w-50">
+
+                        @foreach (var rol in Model.DepartamentoTipo)
+                        {
+                            if (Model.DepartamentoTipoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col text-black">Código:</label>
+                <div class="col-sm-10">
+                    <input type="text" asp-for="Codigo" class="form-control w-50" required id="codigo" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Nome:</label>
+                <div class="col-sm-10">
+                    <input type="text" asp-for="Nome" class="form-control w-50" required id="nome" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Descrição:</label>
+                <div class="col-sm-10">
+                    <textarea asp-for="Descricao" class="form-control w-50" required id="descricao"></textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Setor:</label>
+                <div class="col-sm-10">
+                    <input type="text" asp-for="Setor" class="form-control w-50" required id="setor" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Data da Baixa:</label>
+                <div class="col-sm-10">
+                    @if (Model.DataBaixa.ToString() != "01/01/0001 00:00:00")
+                    {
+                        <input type="date" asp-for="DataBaixa" class="form-control w-50" required id="dataBaixa" />     
+                    }
+                    else
+                    {
+                        <input type="date" asp-format="dd/MM/yyyy" asp-for="DataBaixa" class="form-control w-50" required id="dataBaixa" />
+                    }
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Foto:</label>
+                <div class="col-sm-10">
+                    <input type="file" asp-for="Imagem" class="form-control" id="imagem" />
+
+                    @if (!string.IsNullOrEmpty(ViewBag.Mensagem))
+                    {
+                        <div class="mb-3">
+                            <label id="mensagemErro" style="color:red; text-align:center; font-size:14px;">@ViewBag.Mensagem</label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="btn-group float-end" role="group">
+                <input type="submit" class="btn btn-dark" value="Salvar" />
+                <button style="margin-left:5px;" onclick="limparCampos()" class="btn btn-dark">Limpar</button>
+            </div>
+        </form>
+    </div>
+    <br />
+    <br />
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Index" asp-controller="Patrimonio" role="button" class="btn btn-dark">Voltar</a>
+    </div>
+</body>
+
+<br />
+<footer class="footer">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
+
+<script Script>
+
+    function limparCampos(){
+        $("#codigo").val("");
+        $("#mes").val("");
+        $("#nome").val("");
+        $("#descricao").val("");
+        $("#dataBaixa").val("");
+        $("#setor").val("");
+        $("#foto").val("");
+        $("#dTipo").val(0);
+    }
+</script>
+
+

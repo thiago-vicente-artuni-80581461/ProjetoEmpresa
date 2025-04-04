@@ -35,6 +35,12 @@ public class IgrejaBatista1Context : DbContext
 
     public DbSet<DepartamentoIgrejaVO> DepartamentoIgreja { get; set; }
 
+    public DbSet<CadastroPatrimonio> CadastroPatrimonio { get; set; }
+
+    public DbSet<RegistroAcesso> RegistroAcesso { get; set; }
+
+    public DbSet<Cargos> Cargos { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

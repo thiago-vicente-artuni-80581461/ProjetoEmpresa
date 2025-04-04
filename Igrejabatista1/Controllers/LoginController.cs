@@ -49,6 +49,9 @@ namespace IgrejaBatista1.Controllers
                     HttpContext.Session.SetString("DepartamentoTipoId", recuperarPefilLogin.DepartamentoTipoId.ToString());
 
                     HttpContext.Session.SetString(SessionNome, login.LoginUsuario);
+
+                    LoginService.SalvarRegistroAcesso(login);
+
                     return RedirectToAction("Index", "Home");
                 }
                 var mensagem = "Usuário e/ou senha inválidos!!! Por favor, tente novamente!!!";

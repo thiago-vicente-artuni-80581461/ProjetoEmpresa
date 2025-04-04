@@ -1,0 +1,42 @@
+﻿<header>
+    @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
+</header>
+<br />
+<br />
+<br />
+<div style="background-color:#212529;">
+    <h5 style="color:white; margin-left:10px;">Relatório do Caixa da Igreja</h5>
+</div>
+<br />
+<br />
+<body>
+    <div class="container">
+        <div class="conteudo">
+            <form asp-action="GerarRelatorioCaixa" asp-controller="Relatorio" method="get">
+                <div class="row mb-3">
+                    <label class="col text-black">Mês:</label>
+                    <div class="col-sm-10">
+                        <input type="number" min="1" max="12" maxlength="2" class="form-control w-50" id="mes" name="mes" />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col text-black">Ano:</label>
+                    <div class="col-sm-10">
+                        <input type="number" min="1900" max="2099" step="1" maxlength="4" class="form-control w-50" id="ano" name="ano" />
+                    </div>
+                </div>
+
+                <div class="btn-group float-end" role="group">
+                    <input type="submit" class="btn btn-dark" value="Gerar" />
+                </div>
+            </form>
+        </div> 
+    </div>
+</body>
+<br />
+<br />
+
+<footer class="footer">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>

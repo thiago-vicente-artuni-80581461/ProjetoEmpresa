@@ -17,19 +17,14 @@ namespace IgrejaBatista1.Controllers
             _entradaService = entradaService;
         }
         [HttpGet]
-        public IActionResult Index(string membro = "")
+        public IActionResult Index(string membro = "", int? mes = null, int? ano = null)
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
             perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
             int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
 
             IEnumerable<EntradaVO> entrada = null;
-            entrada = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId).ToList();
-
-            if (!string.IsNullOrEmpty(membro))
-            {
-                entrada = entrada.Where(th => th.MembroCadastroDescricao.Contains(membro)).OrderBy(th => th.MembroCadastroDescricao).ToList();
-            }
+            entrada = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, mes, ano, membro).ToList();
 
             return View(entrada);
         }
@@ -81,7 +76,7 @@ namespace IgrejaBatista1.Controllers
             {
                 perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId);
+                var lista = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, null, null, null);
 
                 var registro = lista.FirstOrDefault(th => th.Id == Id);
 

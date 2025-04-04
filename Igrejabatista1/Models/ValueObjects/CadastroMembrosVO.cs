@@ -1,4 +1,6 @@
-﻿namespace IgrejaBatista1.Models.ValueObjects
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace IgrejaBatista1.Models.ValueObjects
 {
     public class CadastroMembrosVO
     {
@@ -11,6 +13,11 @@
         public string NomePai { get; set; }
         public DateTime DataBatismo { get; set; }
         public DateTime DataEmissao { get; set; }
+        public int? CargoId { get; set; }
+        public IEnumerable<SelectListItem> Cargo { get; set; }
+
+        public string CargoNome { get; set; }
+        
 
     }
 }

@@ -19,8 +19,7 @@ namespace IgrejaBatista1.Models
         public int? TipoId { get; set; }
 
         [Column("MembroId")]
-        [Required]
-        public int MembroId { get; set; }
+        public int? MembroId { get; set; }
 
         [Column("EventoId")]
         public int? EventoId { get; set; }

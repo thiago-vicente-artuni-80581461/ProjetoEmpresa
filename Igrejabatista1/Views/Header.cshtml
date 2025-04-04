@@ -1,40 +1,74 @@
 ﻿@model string
-<nav class="navbar nav-pills navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
-    <div class="container">
-        <nav class="navbar">
-            <div class="container">
-                <a>
-                    <img src="~/lib/icone_igreja_bgremove-small.jpg" alt="Icone Igreja Batista" width="40" height="40">
-                </a>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <img src="~/lib/icone_igreja_bgremove-small.jpg" alt="Icone Igreja Batista" width="40" height="40">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProdutos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Cadastros
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProdutos">
+                                <li><a class="dropdown-item" href="@Url.Action("Index", "Cadastro")">Cadastro de Membros</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Index", "Patrimonio")">Patrimônio</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("IndexUsuario", "Cadastro")">Cadastro de Usuário</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Entradas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServicos">
+                                <li><a class="dropdown-item" href="@Url.Action("Index", "Entradas")">Dízimo/Ofertas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Saídas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServicos">
+                                <li><a class="dropdown-item" href="@Url.Action("IndexSaida", "Caixa")">Saída</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Caixa Igreja
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServicos">
+                                <li><a class="dropdown-item" href="@Url.Action("Index", "Caixa")">Valores em Caixa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Relatórios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServicos">
+                                <li><a class="dropdown-item" href="@Url.Action("Index", "Relatorio")">Caixa</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav">
+                        <li>
+                            <span style="text-align:center;" class="nav-link text-white">@Model</span>
+                        </li>
+                        <li>
+                            <a class="nav-link text-danger" asp-controller="Login" asp-action="Login">Sair</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" asp-controller="Cadastro" asp-action="Index">Cadastro de membros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" asp-controller="Entradas" asp-action="Index">Dízimo/Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" asp-controller="Caixa" asp-action="Index">Caixa Igreja</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" asp-controller="Caixa" asp-action="IndexSaida">Saída</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" asp-controller="Patrimonio" asp-action="Index">Patrimônio</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav flex-grow-1 float-end">
-                <li class="nav-item">
-                    <h5 class="nav-link text-white nomeusuario">@Model</h5>
-                    <a class="nav-link text-danger" asp-controller="Login" asp-action="Login">Sair</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </header>
+</body>

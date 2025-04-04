@@ -1,11 +1,11 @@
-﻿@model string 
-  
-<header>  
+﻿@model string
+<header>
     @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
 </header>
-<div style="text-align:center;">
-<img src="~/lib/icone_igreja_bgremove.jpg" alt="Icone Igreja Batista" width="400" height="400">
+
+<div class="imagemLogo">
+    <img src="~/lib/icone_igreja_bgremove.jpg" alt="Icone Igreja Batista" width="43%" height="43%">
 </div>
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<footer class="footer">
     @Html.Partial("~/Views/Footer.cshtml")
 </footer>

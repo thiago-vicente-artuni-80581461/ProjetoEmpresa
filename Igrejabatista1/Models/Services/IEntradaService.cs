@@ -11,7 +11,7 @@ namespace IgrejaBatista1.Models.Services
         IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(int perfilId, int departamentoId);
         IEnumerable<SelectListItem> RecuperarDadosEvento();
         Entrada RecuperarInformacoesEntrada(int id);
-        IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId);
+        IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro);
         void SalvarEntrada(EntradaVO entrada);
     }
 }

@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using IgrejaBatista1.Data;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace IgrejaBatista1.Models.Repository
 {
@@ -15,17 +18,34 @@ namespace IgrejaBatista1.Models.Repository
             _context = context;
         }
 
-        public List<CadastroMembro> RecuperarListaMembros()
+        public List<CadastroMembrosVO> RecuperarListaMembros()
         {
-            List<CadastroMembro> membros = _context.CadastroMembro.ToList();
+            List<CadastroMembrosVO> membros = (from c in _context.CadastroMembro
+                                               from ca in _context.Cargos.Where(th => th.Id == c.CargoId).DefaultIfEmpty()                                  
+                                 select new CadastroMembrosVO
+                                 {
+                                    Id = c.Id,
+                                    CargoId = c.CargoId,
+                                    CargoNome = ca.Nome,
+                                    CPF = c.CPF,
+                                    RG = c.RG,
+                                    DataBatismo = c.DataBatismo,
+                                    DataEmissao = c.DataEmissao,
+                                    DataNascimento = c.DataNascimento,
+                                    NomeCompleto = c.NomeCompleto,
+                                    NomeMae = c.NomeMae,
+                                    NomePai = c.NomePai
+                                 }).ToList();
 
-            var lista = _mapper.Map<List<CadastroMembro>>(membros);
+            var lista = _mapper.Map<List<CadastroMembrosVO>>(membros);
 
             return lista;
         }
 
         public void SalvarCadastroMembro(CadastroMembro cadastroMembro)
         {
+            if (cadastroMembro.CargoId == 0)
+                cadastroMembro.CargoId = null;
             if (cadastroMembro.Id != 0)
             {
                 cadastroMembro.DataEmissao = DateTime.Now;
@@ -39,10 +59,49 @@ namespace IgrejaBatista1.Models.Repository
             _context.SaveChanges();  
         }
 
-        public void ExcluirCadastroMembro(CadastroMembro cadastroMembro)
+        public void ExcluirCadastroMembro(CadastroMembrosVO registro)
         {
-            _context.Remove(cadastroMembro);
+            CadastroMembro vo = new CadastroMembro()
+            {
+                Id = registro.Id,
+                CargoId = registro.CargoId,
+                CPF = registro.CPF,
+                DataBatismo = registro.DataBatismo,
+                DataEmissao = registro.DataEmissao,
+                DataNascimento = registro.DataNascimento,
+                NomeCompleto = registro.NomeCompleto,
+                NomeMae = registro.NomeMae,
+                NomePai = registro.NomePai,
+                RG = registro.RG
+            };
+            _context.CadastroMembro.Remove(vo);
             _context.SaveChanges();
+        }
+
+        public IEnumerable<SelectListItem> RecuperarListaCargos()
+        {
+            var cadastroMembro = _context.Cargos.ToList();
+            List<SelectListItem> Membros = new List<SelectListItem>();
+
+            SelectListItem l = new SelectListItem
+            {
+                Text = "--Selecione--",
+                Value = "0",
+                Selected = true
+            };
+            Membros.Add(l);
+
+            foreach (var item in cadastroMembro)
+            {
+                l = new SelectListItem
+                {
+                    Text = item.Nome,
+                    Value = item.Id.ToString()
+                };
+                Membros.Add(l);
+            }
+
+            return Membros.ToList();
         }
     }
 }

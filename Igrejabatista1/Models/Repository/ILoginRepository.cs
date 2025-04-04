@@ -5,6 +5,7 @@ namespace IgrejaBatista1.Models.Repository
     public interface ILoginRepository
     {
         Perfil RecuperarLoginPerfil(string loginUsuario);
+        void SalvarRegistroAcesso(LoginVO login);
         bool ValidarLoginUsuario(LoginVO login);
     }
 }
