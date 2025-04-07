@@ -21,57 +21,89 @@ namespace IgrejaBatista1.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
-            int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-            var lista = _caixaService.RecuperarListaCaixa(departamentoTipoId);
+            try
+            {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                var lista = _caixaService.RecuperarListaCaixa(departamentoTipoId);
 
-            return View(lista);
+                return View(lista);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
+           
         }
 
         [HttpGet]
         public IActionResult IndexSaida(string tipoConta, string dataSaida)
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
-            int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-            int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-            var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
+            try
+            {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
+                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
 
-            return View(lista);
+                return View(lista);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
+           
         }
 
         [HttpGet]
 
         public IActionResult CadastroSaida([FromRoute] int Id)
         {
-            SaidaVO saida = new SaidaVO();
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
-            int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-            int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-            saida.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);
-
-            if (Id != 0)
+            try
             {
-                var buscarDadosSaida = _caixaService.BuscarDadosSaida(Id);
-                saida.DepartamentoTipoId = buscarDadosSaida.DepartamentoTipoId;
-                saida.Descricao = buscarDadosSaida.Descricao;
-                saida.DataCriacao = buscarDadosSaida.DataCriacao;
-                saida.DataSaida = buscarDadosSaida.DataSaida;
-                saida.ValorPago = buscarDadosSaida.ValorPago;
-                saida.TipoConta = buscarDadosSaida.TipoConta;
-                saida.Id = buscarDadosSaida.Id;
+                SaidaVO saida = new SaidaVO();
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
+                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                saida.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);
+
+                if (Id != 0)
+                {
+                    var buscarDadosSaida = _caixaService.BuscarDadosSaida(Id);
+                    saida.DepartamentoTipoId = buscarDadosSaida.DepartamentoTipoId;
+                    saida.Descricao = buscarDadosSaida.Descricao;
+                    saida.DataCriacao = buscarDadosSaida.DataCriacao;
+                    saida.DataSaida = buscarDadosSaida.DataSaida;
+                    saida.ValorPago = buscarDadosSaida.ValorPago;
+                    saida.TipoConta = buscarDadosSaida.TipoConta;
+                    saida.Id = buscarDadosSaida.Id;
 
 
+                }
+
+                return View(saida);
             }
-
-            return View(saida);
+            catch (ValidationException)
+            {
+                throw;
+            }
+          
         }
 
         [HttpPost]
         public IActionResult SalvarSaida(SaidaVO saida)
         {
-            _caixaService.SalvarSaida(saida);
+            try
+            {
+                _caixaService.SalvarSaida(saida);
 
-            return RedirectToAction("IndexSaida", "Caixa");
+                return RedirectToAction("IndexSaida", "Caixa");
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
+          
         }
     }
 }

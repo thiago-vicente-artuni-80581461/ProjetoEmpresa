@@ -30,5 +30,20 @@ namespace IgrejaBatista1.Models.Services
         {
            return _cadastroMembroRepository.RecuperarListaCargos();
         }
+
+        public IEnumerable<SelectListItem> RecuperarPerfilTipo()
+        {
+            return _cadastroMembroRepository.RecuperarPerfilTipo();
+        }
+
+        public IEnumerable<SelectListItem> RecuperarDepartamentoTipo()
+        {
+            return _cadastroMembroRepository.RecuperarDepartamentoTipo();
+        }
+
+        public void SalvarCadastroUsuario(LoginVO login)
+        {
+            _cadastroMembroRepository.SalvarCadastroUsuario(login);
+        }
     }
 }

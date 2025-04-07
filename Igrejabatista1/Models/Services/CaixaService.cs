@@ -36,5 +36,15 @@ namespace IgrejaBatista1.Models.Services
         {
             return _caixaRepository.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano);
         }
+
+        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaEntradaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        {
+            return _caixaRepository.RecuperarListaEntradaRelatorio(departamentoTipoId, mes, ano);
+        }
+
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaidaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        {
+            return _caixaRepository.RecuperarListaSaidaRelatorio(departamentoTipoId, mes, ano);
+        }
     }
 }

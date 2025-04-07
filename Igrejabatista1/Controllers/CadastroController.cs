@@ -10,48 +10,64 @@ namespace IgrejaBatista1.Controllers
     public class CadastroController : Controller
     {
         private readonly ICadastroMembroService _cadastroMembroService;
+        private readonly IloginService _loginService;
 
-        public CadastroController(ICadastroMembroService cadastroMembroService)
+        public CadastroController(ICadastroMembroService cadastroMembroService, IloginService loginService)
         {
             _cadastroMembroService = cadastroMembroService;
+            _loginService = loginService;
         }
 
         [HttpGet]
         public IActionResult Index(string nomeCompleto = "", string cpf = "", string dataBatismo = "")
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
-
-            var lista = _cadastroMembroService.RecuperarListaMembros();
-
-            DateTime? data = null;
-
-            if (!string.IsNullOrEmpty(nomeCompleto))
+            try
             {
-                lista = lista.Where(d => d.NomeCompleto.Contains(nomeCompleto)).ToList();
-            }
-            if (!string.IsNullOrEmpty(cpf))
-            {
-                lista = lista.Where(d => d.CPF.Contains(cpf)).ToList();
-            }
-            if (!string.IsNullOrEmpty(dataBatismo))
-            {
-                data = Convert.ToDateTime(dataBatismo);
-                lista = lista.Where(d => d.DataBatismo.Date == data).ToList();
-            }
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
-            return View(lista);
+                var lista = _cadastroMembroService.RecuperarListaMembros();
+
+                DateTime? data = null;
+
+                if (!string.IsNullOrEmpty(nomeCompleto))
+                {
+                    lista = lista.Where(d => d.NomeCompleto.Contains(nomeCompleto)).ToList();
+                }
+                if (!string.IsNullOrEmpty(cpf))
+                {
+                    lista = lista.Where(d => d.CPF.Contains(cpf)).ToList();
+                }
+                if (!string.IsNullOrEmpty(dataBatismo))
+                {
+                    data = Convert.ToDateTime(dataBatismo);
+                    lista = lista.Where(d => d.DataBatismo.Date == data).ToList();
+                }
+
+                return View(lista);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
         }
 
         [HttpGet]
         public IActionResult NovoCadastroMembro()
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+            try
+            {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
-            CadastroMembrosVO novo = new CadastroMembrosVO();
+                CadastroMembrosVO novo = new CadastroMembrosVO();
 
-            novo.Cargo = _cadastroMembroService.RecuperarListaCargos();
+                novo.Cargo = _cadastroMembroService.RecuperarListaCargos();
 
-            return View(novo);
+                return View(novo);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
         }
 
         [HttpPost]
@@ -129,6 +145,59 @@ namespace IgrejaBatista1.Controllers
             catch (ValidationException)
             {
                 throw;
+            }
+        }
+
+
+        [HttpGet]
+        public IActionResult IndexUsuario(string nome = "")
+        {
+            try
+            {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                ViewBag.DepartamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+
+                var lista = _loginService.RecuperarUsuariosLogin(nome);
+                return View(lista);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
+        }
+        [HttpGet]
+        public IActionResult CadastroUsuario()
+        {
+            try
+            {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                LoginVO novo = new LoginVO();
+
+                novo.PerfilTipo = _cadastroMembroService.RecuperarPerfilTipo();
+                novo.DepartamentoTipo = _cadastroMembroService.RecuperarDepartamentoTipo();
+
+                return View(novo);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
+          
+        }
+
+        [HttpPost]
+        public IActionResult SalvarUsuario(LoginVO login)
+        {
+            try
+            {
+                _cadastroMembroService.SalvarCadastroUsuario(login);
+                return RedirectToAction("IndexUsuario", "Cadastro");
+            }
+            catch (ValidationException)
+            {
+                return RedirectToAction("SalvarUsuario", "Cadastro");
             }
         }
 

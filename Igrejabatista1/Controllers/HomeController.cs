@@ -4,6 +4,7 @@ using IgrejaBatista1.Models;
 using IgrejaBatista1.Models.Services;
 using IgrejaBatista1.Models.ValueObjects;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using System.ComponentModel.DataAnnotations;
 
 namespace IgrejaBatista1.Controllers;
 
@@ -21,19 +22,16 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-        ViewData["Nome"] = HttpContext.Session.GetString("Nome");
-   
-        return View("Index", ViewData["Nome"]);
-    }
+        try
+        {
+            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View("Index", ViewData["Nome"]);
+        }
+        catch (ValidationException)
+        {
+            throw;
+        }
+      
     }
 }

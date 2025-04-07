@@ -15,5 +15,8 @@ namespace IgrejaBatista1.Models
 
         [Column("DepartamentoTipoId")]
         public int DepartamentoTipoId { get; set; }
+
+        [Column("DataCriacao")]
+        public DateTime DataCriacao { get; set; }
     }
 }

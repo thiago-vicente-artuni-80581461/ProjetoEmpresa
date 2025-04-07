@@ -24,13 +24,21 @@ namespace IgrejaBatista1.Controllers
         [HttpGet]
         public IActionResult Login(string mensagem = "")
         {
-            LoginVO login = new LoginVO();
-
-            if (!string.IsNullOrEmpty(mensagem))
+            try
             {
-                login.Mensagem = mensagem;
+                LoginVO login = new LoginVO();
+
+                if (!string.IsNullOrEmpty(mensagem))
+                {
+                    login.Mensagem = mensagem;
+                }
+                return View(login);
             }
-            return View(login);
+            catch (ValidationException)
+            {
+                throw;
+            }
+           
         }
 
         [HttpPost]

@@ -68,7 +68,20 @@ namespace IgrejaBatista1.Models.Repository
 
         public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixaRelatorio(int departamentoTipoId, int? mes, int? ano)
         {
-            return _context.DepartamentoIgreja.FromSqlRaw("EXEC DadosCaixaIgrejaRelatorio @departamentoId = {0}, @mes = {1}, @ano = {2}", departamentoTipoId, mes, ano).ToList();
+            return _context.DepartamentoIgreja.FromSqlRaw("EXEC DadosCaixaIgrejaRelatorio @departamentoId = {0}, @mes = {1}, @ano = {2}", departamentoTipoId, mes, ano).AsNoTracking().ToList();
+        }
+        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaEntradaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        {
+            return _context.DepartamentoIgreja.FromSqlRaw("EXEC CaixaIgrejaTipoContribuicao @departamentoId = {0}, @mes = {1}, @ano = {2}", departamentoTipoId, mes, ano).AsNoTracking().ToList();
+        }
+
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaidaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        {
+            return _context.SaidaVO.FromSqlRaw( "SELECT S.*, DT.Nome AS DepartamentoTipoDescricao FROM Saida S INNER JOIN " +
+                                               "               DepartamentoTipo DT ON DT.Id = S.DepartamentoTipoId " +
+                                               "          WHERE ({0} = 1 OR S.DepartamentoTipoId = {0} ) AND " +
+                                               "                ({1} IS NULL OR DATEPART(MONTH, S.DataSaida) = {1} ) AND" +
+                                               "                ({2} IS NULL OR DATEPART(YEAR, S.DataSaida) = {2} )  ", departamentoTipoId, mes, ano).AsNoTracking().ToList();
         }
     }
 }

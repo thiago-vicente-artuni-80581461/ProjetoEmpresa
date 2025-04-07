@@ -11,47 +11,61 @@
     <h5 style="color:white; margin-left:10px;">Caixa da Igreja</h5>
 </div>
 <br />
-    <body>
+<body>
     <table class="custom-table" style="min-height:30%; height:60%;">
-            <thead>
+        <thead>
+            <tr>
+                <th scope="col">Tipo do Departamento</th>
+                <th scope="col">Total de Dízimos/Ofertas</th>
+                <th scope="col">Total de Conta Paga</th>
+                <th scope="col">Total Caixa</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th scope="col">Tipo do Departamento</th>
-                    <th scope="col">Total de Dízimos/Ofertas</th>
-                    <th scope="col">Total de Conta Paga</th>
-                    <th scope="col">Total Caixa</th>
+                    <td>
+                        @item.DepartamentoTipoDescricao
+                    </td>
+                    <td>
+                        @item.ValorReceita.ToString("C")
+                    </td>
+                    <td>
+                        @if (item.ValorContas.HasValue)
+                        {
+                            @Convert.ToDecimal(item.ValorContas).ToString("C")
+                        }
+                        else
+                        {
+                            @item.ValorContas
+                        }
+                    </td>
+                    <td>
+                        @if (item.ValorTotal.HasValue)
+                        {
+                            @Convert.ToDecimal(item.ValorTotal).ToString("C")
+                        }
+                        else
+                        {
+                            @item.ValorTotal
+                        }
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @item.DepartamentoTipoDescricao
-                        </td>
-                        <td>
-                            @item.ValorReceita.ToString("C")
-                        </td>
-                        <td>
-                            @item.ValorContas.ToString("C")
-                        </td>
-                        <td>
-                            @item.ValorTotal.ToString("C")
-                        </td>
-                    </tr>
-                }
+            }
 
-            </tbody>
-        </table>
-        <div class="col-lg-12" style="text-align: left;">
-            <a asp-action="Index" asp-controller="Home" style="margin-left:5px;" role="button" class="btn btn-dark">Voltar</a>
+        </tbody>
+    </table>
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Index" asp-controller="Home" style="margin-left:5px;" role="button" class="btn btn-dark">Voltar</a>
 
-        </div>
-    </body>
+    </div>
+</body>
 
-    <br />
-    <footer class="footer">
-        @Html.Partial("~/Views/Footer.cshtml")
-    </footer>
+<br />
+<footer class="footer">
+    @Html.Partial("~/Views/Footer.cshtml")
+</footer>
 </div>
 <script Script>
       function LimparCampos(){

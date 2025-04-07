@@ -4,6 +4,8 @@ using IgrejaBatista1.Models.ValueObjects;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace IgrejaBatista1.Models.Repository
 {
@@ -21,21 +23,21 @@ namespace IgrejaBatista1.Models.Repository
         public List<CadastroMembrosVO> RecuperarListaMembros()
         {
             List<CadastroMembrosVO> membros = (from c in _context.CadastroMembro
-                                               from ca in _context.Cargos.Where(th => th.Id == c.CargoId).DefaultIfEmpty()                                  
-                                 select new CadastroMembrosVO
-                                 {
-                                    Id = c.Id,
-                                    CargoId = c.CargoId,
-                                    CargoNome = ca.Nome,
-                                    CPF = c.CPF,
-                                    RG = c.RG,
-                                    DataBatismo = c.DataBatismo,
-                                    DataEmissao = c.DataEmissao,
-                                    DataNascimento = c.DataNascimento,
-                                    NomeCompleto = c.NomeCompleto,
-                                    NomeMae = c.NomeMae,
-                                    NomePai = c.NomePai
-                                 }).ToList();
+                                               from ca in _context.Cargos.Where(th => th.Id == c.CargoId).DefaultIfEmpty()
+                                               select new CadastroMembrosVO
+                                               {
+                                                   Id = c.Id,
+                                                   CargoId = c.CargoId,
+                                                   CargoNome = ca.Nome,
+                                                   CPF = c.CPF,
+                                                   RG = c.RG,
+                                                   DataBatismo = c.DataBatismo,
+                                                   DataEmissao = c.DataEmissao,
+                                                   DataNascimento = c.DataNascimento,
+                                                   NomeCompleto = c.NomeCompleto,
+                                                   NomeMae = c.NomeMae,
+                                                   NomePai = c.NomePai
+                                               }).ToList();
 
             var lista = _mapper.Map<List<CadastroMembrosVO>>(membros);
 
@@ -53,10 +55,10 @@ namespace IgrejaBatista1.Models.Repository
             }
             else
             {
-                 cadastroMembro.DataEmissao = DateTime.Now;
+                cadastroMembro.DataEmissao = DateTime.Now;
                 _context.Add(cadastroMembro);
             }
-            _context.SaveChanges();  
+            _context.SaveChanges();
         }
 
         public void ExcluirCadastroMembro(CadastroMembrosVO registro)
@@ -103,5 +105,110 @@ namespace IgrejaBatista1.Models.Repository
 
             return Membros.ToList();
         }
+
+        public IEnumerable<SelectListItem> RecuperarPerfilTipo()
+        {
+            var cadastroMembro = _context.PerfilTipo.ToList();
+            List<SelectListItem> usuarios = new List<SelectListItem>();
+
+            SelectListItem l = new SelectListItem
+            {
+                Text = "--Selecione--",
+                Value = "0",
+                Selected = true
+            };
+            usuarios.Add(l);
+
+            foreach (var item in cadastroMembro)
+            {
+                l = new SelectListItem
+                {
+                    Text = item.Nome,
+                    Value = item.Id.ToString()
+                };
+                usuarios.Add(l);
+            }
+
+            return usuarios.ToList();
+        }
+
+        public IEnumerable<SelectListItem> RecuperarDepartamentoTipo()
+        {
+            var cadastroMembro = _context.DepartamentoTipo.ToList();
+            List<SelectListItem> tipos = new List<SelectListItem>();
+
+            SelectListItem l = new SelectListItem
+            {
+                Text = "--Selecione--",
+                Value = "0",
+                Selected = true
+            };
+            tipos.Add(l);
+
+            foreach (var item in cadastroMembro)
+            {
+                l = new SelectListItem
+                {
+                    Text = item.Nome,
+                    Value = item.Id.ToString()
+                };
+                tipos.Add(l);
+            }
+
+            return tipos.ToList();
+        }
+
+        public void SalvarCadastroUsuario(LoginVO login)
+        {
+            string senha = string.Empty;
+
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(login.Senha));
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte byteValue in data)
+                {
+                    sb.Append(byteValue.ToString("x2"));
+                }
+
+               senha = sb.ToString(); 
+            }
+
+            Perfil perfil = new Perfil()
+            {
+                TipoPerfilId = login.PerfilTipoId,
+                DepartamentoTipoId = login.DepartamentoTipoId,
+                DataCriacao = DateTime.Now
+            };
+
+            _context.Perfil.Add(perfil);
+            _context.SaveChanges();
+
+            var recuperarPerfil = _context.Perfil.OrderByDescending(th => th.Id).FirstOrDefault();
+
+            Login log = new Login()
+            {
+                LoginUsuario = login.LoginUsuario,
+                Senha = senha,
+                DataCriacao = DateTime.Now
+            };
+
+            _context.Login.Add(log);
+            _context.SaveChanges();
+
+            var recuperarLogin = _context.Login.OrderByDescending(th => th.Id).FirstOrDefault();
+
+            PerfilLogin pl = new PerfilLogin()
+            {
+                LoginId = recuperarLogin.Id,
+                PerfilId = recuperarPerfil.Id,
+                DataCriacao = DateTime.Now
+            };
+
+            _context.PerfilLogin.Add(pl);
+            _context.SaveChanges();
+        }
+
     }
 }

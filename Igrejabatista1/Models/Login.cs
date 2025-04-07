@@ -19,5 +19,8 @@ namespace IgrejaBatista1.Models
         [Required]
         [StringLength(200)]
         public string Senha { get; set; }
+
+        [Column("DataCriacao")]
+        public DateTime DataCriacao { get; set; }
     }
 }

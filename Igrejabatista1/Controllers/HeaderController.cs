@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace IgrejaBatista1.Controllers
 {
@@ -12,9 +14,18 @@ namespace IgrejaBatista1.Controllers
         [HttpPost]
         public IActionResult Header()
         {
-            var login = HttpContext.Session.GetString("Nome");
-            ViewBag.UsuarioLogin = login;
-            return View();
+            try
+            {
+                var login = HttpContext.Session.GetString("Nome");
+                ViewBag.UsuarioLogin = login;
+                return View();
+            }
+            catch (ValidationException)
+            {
+
+                throw;
+            }
+           
         }
     }
 }

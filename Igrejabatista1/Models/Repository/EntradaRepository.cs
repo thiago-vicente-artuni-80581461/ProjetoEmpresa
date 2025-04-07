@@ -48,7 +48,7 @@ namespace IgrejaBatista1.Models.Repository
                     from t in _context.Tipo.Where(ma => ma.Id == e.TipoId).DefaultIfEmpty()
                     from c in _context.CadastroMembro.Where(cm => cm.Id == e.MembroId).DefaultIfEmpty()
                     from v in _context.Evento.Where(ma => ma.Id == e.EventoId).DefaultIfEmpty()
-                    where departamentoTipoId == 1 || (e.PerfilId == perfilId && e.DepartamentoTipoId == departamentoTipoId) &&
+                    where (departamentoTipoId == 1 || (e.PerfilId == perfilId && e.DepartamentoTipoId == departamentoTipoId) ) &&
                           (mes == null || e.Mes == mes) &&
                           (ano == null || e.Ano == ano) &&
                           (string.IsNullOrEmpty(membro) || c.NomeCompleto.Contains(membro))

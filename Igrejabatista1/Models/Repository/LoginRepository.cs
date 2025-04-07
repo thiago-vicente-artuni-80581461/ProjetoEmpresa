@@ -70,5 +70,22 @@ namespace IgrejaBatista1.Models.Repository
             _context.RegistroAcesso.Add(novo);
             _context.SaveChanges();
         }
+
+        public IEnumerable<LoginVO> RecuperarUsuariosLogin(string nome)
+        {
+            return (from pt in _context.PerfilTipo
+                    join p in _context.Perfil on pt.Id equals p.TipoPerfilId
+                    join pl in _context.PerfilLogin on p.Id equals pl.PerfilId
+                    join l in _context.Login on pl.LoginId equals l.Id
+                    where l.LoginUsuario.Contains(nome)
+                    select new LoginVO
+                    {
+                        Id = l.Id,
+                        LoginUsuario = l.LoginUsuario,
+                        PerfilLogin = pt.Nome,
+                        Senha = l.Senha,
+                        PerfilTipoId = pt.Id
+                    }).ToList();
+        }
     }
 }
