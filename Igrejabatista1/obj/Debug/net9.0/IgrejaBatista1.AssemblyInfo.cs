@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IgrejaBatista1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fefbb8a5792e32a2a5c59d0762def34678a88436")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f6d8b0d270c4eb6c4dd49eb4cd5091dd3670eb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("IgrejaBatista1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IgrejaBatista1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

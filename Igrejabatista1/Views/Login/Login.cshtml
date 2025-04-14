@@ -6,7 +6,7 @@
     <img src="~/lib/icone_igreja_bgremove.jpg" alt="Icone Igreja Batista" width="140" height="140">
     <br />
     <form asp-controller="Login" asp-action="Logar" method="post">
-        <input asp-for="Id" type="text" hidden/>
+        <input asp-for="Id" type="text" hidden />
         <div class="mb-3">
             <input asp-for="LoginUsuario" type="text" required class="form-control-sm" placeholder="Usuário" />
         </div>
@@ -23,6 +23,17 @@
             </div>
         }
     </form>
+    <hr />
+
+    <div class="text-center">
+        <div class="mb-3">
+            <div style="margin-left:20px;">
+                <span>Você é novo por aqui? Então faça o cadastro, clicando no link abaixo: </span>
+                <br />
+                <a asp-action="CadastroUsuarioLogin" asp-controller="Login" style="color:blue; text-decoration:none;"> Cadastre-se </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 

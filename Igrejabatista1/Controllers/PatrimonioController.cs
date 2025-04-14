@@ -31,6 +31,12 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
 
                 IEnumerable<CadastroPatrimonioVO> patrimonio = null;
@@ -53,7 +59,14 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 CadastroPatrimonioVO patrimonio = new CadastroPatrimonioVO();
+
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
 
                 ViewBag.Mensagem = mensagem;
@@ -89,6 +102,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 if (patrimonio.Imagem != null && patrimonio.Imagem.Length > 0)
                 {
                     var extensao = Path.GetExtension(patrimonio.Imagem.FileName);

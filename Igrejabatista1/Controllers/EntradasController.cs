@@ -22,6 +22,12 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
 
@@ -44,7 +50,14 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 EntradaVO entrada = new EntradaVO();
+
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
 
@@ -83,6 +96,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 _entradaService.SalvarEntrada(entrada);
                 return RedirectToAction("Index", "Entradas");
             }
@@ -98,6 +118,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 var lista = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, null, null, null);

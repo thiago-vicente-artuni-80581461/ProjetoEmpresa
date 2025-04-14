@@ -24,6 +24,12 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 var lista = _caixaService.RecuperarListaCaixa(departamentoTipoId);
 
@@ -42,6 +48,12 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
@@ -61,8 +73,14 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                SaidaVO saida = new SaidaVO();
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
+                SaidaVO saida = new SaidaVO();
                 int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 saida.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);
@@ -95,6 +113,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 _caixaService.SalvarSaida(saida);
 
                 return RedirectToAction("IndexSaida", "Caixa");

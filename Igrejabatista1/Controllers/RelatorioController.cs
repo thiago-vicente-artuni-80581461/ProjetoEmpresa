@@ -18,6 +18,11 @@ namespace IgrejaBatista1.Controllers
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+            if (ViewData["Nome"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             return View();
         }
 
@@ -25,6 +30,13 @@ namespace IgrejaBatista1.Controllers
         public IActionResult GerarRelatorioCaixa(int? mes = null, int? ano = null) {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 var lista = _caixaService.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano).ToList();
 
@@ -69,6 +81,11 @@ namespace IgrejaBatista1.Controllers
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+            if (ViewData["Nome"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             return View();
         }
 
@@ -77,6 +94,14 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 var lista = _caixaService.RecuperarListaEntradaRelatorio(departamentoTipoId, mes, ano).ToList();
 
@@ -120,6 +145,11 @@ namespace IgrejaBatista1.Controllers
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+            if (ViewData["Nome"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             return View();
         }
 
@@ -128,6 +158,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
                 var lista = _caixaService.RecuperarListaSaidaRelatorio(departamentoTipoId, mes, ano).ToList();
 

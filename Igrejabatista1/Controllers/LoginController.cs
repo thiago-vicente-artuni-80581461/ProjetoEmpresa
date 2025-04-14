@@ -15,10 +15,13 @@ namespace IgrejaBatista1.Controllers
     public class LoginController : Controller
     {
         private readonly IloginService LoginService;
+        private readonly ICadastroMembroService _cadastroMembroService;
+
         const string SessionNome = "Nome";
-        public LoginController(IloginService loginService)
+        public LoginController(IloginService loginService, ICadastroMembroService cadastroMembroService)
         {
             LoginService = loginService;
+            _cadastroMembroService = cadastroMembroService;
         }
 
         [HttpGet]
@@ -69,6 +72,38 @@ namespace IgrejaBatista1.Controllers
             catch (ValidationException)
             {
                 throw;
+            }
+        }
+
+        [HttpGet]
+        public IActionResult CadastroUsuarioLogin()
+        {
+            try
+            {
+                LoginVO novo = new LoginVO();
+
+                novo.PerfilTipo = _cadastroMembroService.RecuperarPerfilTipo();
+                novo.DepartamentoTipo = _cadastroMembroService.RecuperarDepartamentoTipo();
+
+                return View(novo);
+            }
+            catch (ValidationException)
+            {
+                throw;
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SalvarUsuario(LoginVO login)
+        {
+            try
+            {
+                _cadastroMembroService.SalvarCadastroUsuario(login);
+                return RedirectToAction("Login", "Login");
+            }
+            catch (ValidationException)
+            {
+                return RedirectToAction("SalvarUsuario", "Login");
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿@using IgrejaBatista1.Models.ValueObjects
 @model LoginVO
-<script src="https://unpkg.com/imask"></script>
 
 <header>
     @Html.Partial("~/Views/Header.cshtml", ViewData["Nome"])
@@ -32,7 +31,7 @@
             <div class="row mb-3">
                 <label class="col text-black">Perfil:</label>
                 <div class="col-sm-10">
-                    <select asp-for="PerfilTipoId" id="cargo" class="form-control w-50">
+                    <select asp-for="PerfilTipoId" id="perfilTipo" class="form-control w-50">
 
                         @foreach (var rol in Model.PerfilTipo)
                         {
@@ -89,14 +88,10 @@
 
 <script Script>
     function limparCampos(){
-        $("#nome").val("");
-        $("#dataNascimento").val("");
-        $("#cpf").val("");
-        $("#rg").val("");
-        $("#nomeMae").val("");
-        $("#nomePai").val("");
-        $("#dataBatismo").val("");
-        $("#cargo").val(0);
+        $("#dTipo").val(0);
+        $("#perfilTipo").val(0);
+        $("#loginusuario").val("");
+        $("#senha").val("");
     }
 
 </script>

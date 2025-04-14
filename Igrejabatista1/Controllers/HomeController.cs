@@ -26,6 +26,11 @@ public class HomeController : Controller
         {
             ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+            if (ViewData["Nome"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             return View("Index", ViewData["Nome"]);
         }
         catch (ValidationException)

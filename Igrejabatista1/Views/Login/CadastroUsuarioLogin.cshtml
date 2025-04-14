@@ -1,0 +1,88 @@
+﻿@using IgrejaBatista1.Models.ValueObjects
+@model LoginVO
+
+<div style="background-color:#212529;">
+    <h5 style="color:white; margin-left:10px;">Cadastro de Usuários</h5>
+</div>
+
+<br />
+<body>
+    <div class="container">
+        <form asp-action="SalvarUsuario" asp-controller="Login" method="post">
+            <input type="text" asp-for="Id" hidden />
+            <div class="row mb-3">
+                <label class="col text-black">Usuário:</label>
+                <div class="col-sm-10">
+                    <input type="text" asp-for="LoginUsuario" required class="form-control w-50" name="loginUsuario" id="loginusuario">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Senha:</label>
+                <div class="col-sm-10">
+                    <input type="password" asp-for="Senha" required class="form-control w-50" name="senha" id="senha">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Perfil:</label>
+                <div class="col-sm-10">
+                    <select asp-for="PerfilTipoId" id="perfilTipo" class="form-control w-50">
+
+                        @foreach (var rol in Model.PerfilTipo)
+                        {
+                            if (Model.PerfilTipoId.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col text-black">Tipo de Departamento:</label>
+                <div class="col-sm-10">
+                    <select asp-for="DepartamentoTipoId" id="dTipo" class="form-control w-50">
+
+                        @foreach (var rol in Model.DepartamentoTipo)
+                        {
+                            if (Model.DepartamentoTipo.ToString() == rol.Value)
+                            {
+                                <option value="@rol.Value" selected>@rol.Text</option>
+                            }
+                            else
+                            {
+                                <option value="@rol.Value">@rol.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-group float-end" role="group">
+                <input type="submit" class="btn btn-dark" value="Salvar" />
+                <button style="margin-left:5px;" onclick="limparCampos()" class="btn btn-dark">Limpar</button>
+            </div>
+
+        </form>
+    </div>
+    <br />
+    <br />
+    <div class="col-lg-12" style="text-align: left;">
+        <a asp-action="Login" asp-controller="Login" role="button" style="margin-left:5px;" class="btn btn-dark">Voltar</a>
+    </div>
+</body>
+<br />
+
+<script Script>
+    function limparCampos(){
+        $("#dTipo").val(0);
+        $("#perfilTipo").val(0);
+        $("#loginusuario").val("");
+        $("#senha").val("");
+    }
+
+</script>

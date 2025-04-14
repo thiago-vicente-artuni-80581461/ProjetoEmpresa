@@ -25,6 +25,11 @@ namespace IgrejaBatista1.Controllers
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 var lista = _cadastroMembroService.RecuperarListaMembros();
 
                 DateTime? data = null;
@@ -58,6 +63,11 @@ namespace IgrejaBatista1.Controllers
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 CadastroMembrosVO novo = new CadastroMembrosVO();
 
                 novo.Cargo = _cadastroMembroService.RecuperarListaCargos();
@@ -75,6 +85,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 _cadastroMembroService.SalvarCadastroMembro(cadastroMembro);
                 return RedirectToAction("Index", "Cadastro");     
             }
@@ -89,6 +106,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 var lista = _cadastroMembroService.RecuperarListaMembros();
                 var registro = lista.FirstOrDefault(th => th.Id == Id);
 
@@ -122,6 +146,12 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
                 var lista = _cadastroMembroService.RecuperarListaMembros();
                 var registro = lista.FirstOrDefault(th => th.Id == id);
 
@@ -156,6 +186,11 @@ namespace IgrejaBatista1.Controllers
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
 
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 ViewBag.DepartamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
 
                 var lista = _loginService.RecuperarUsuariosLogin(nome);
@@ -172,6 +207,11 @@ namespace IgrejaBatista1.Controllers
             try
             {
                 ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
 
                 LoginVO novo = new LoginVO();
 
@@ -192,6 +232,13 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
+                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+
                 _cadastroMembroService.SalvarCadastroUsuario(login);
                 return RedirectToAction("IndexUsuario", "Cadastro");
             }
