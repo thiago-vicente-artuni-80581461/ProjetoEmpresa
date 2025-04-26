@@ -407,4 +407,9 @@ C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\obj\Release\net9.0\r
 C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\obj\Release\net9.0\IgrejaBatista1.pdb
 C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\obj\Release\net9.0\IgrejaBatista1.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\obj\Release\net9.0\ref\IgrejaBatista1.dll
-C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\bin\Release\net9.0\publish\appsettings.Development.json
+C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\bin\Release\net9.0\publish\IgrejaBatista1.staticwebassets.endpoints.json
+C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\bin\Release\net9.0\publish\web.config
+C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\bin\Release\net9.0\publish\appsettings.json
+C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\bin\Release\net9.0\publish\IgrejaBatista1.deps.json
+C:\Users\Usuario\source\repos\ProjetoEmpresa\Igrejabatista1\bin\Release\net9.0\publish\IgrejaBatista1.runtimeconfig.json

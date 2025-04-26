@@ -143,8 +143,7 @@ namespace IgrejaBatista1.Controllers
             {
 
                 throw;
-            }
-           
+            }  
         }
 
         public async Task<IActionResult> Imagem(string imagemGuid)
