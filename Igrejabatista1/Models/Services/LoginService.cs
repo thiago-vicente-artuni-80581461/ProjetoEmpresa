@@ -16,7 +16,7 @@ namespace IgrejaBatista1.Models.Services
             return LoginRepository.ValidarLoginUsuario(login);
         }
 
-        public Perfil RecuperarLoginPerfil(string loginUsuario)
+        public PerfilVO RecuperarLoginPerfil(string loginUsuario)
         {
             return LoginRepository.RecuperarLoginPerfil(loginUsuario);
         }
@@ -26,9 +26,9 @@ namespace IgrejaBatista1.Models.Services
             LoginRepository.SalvarRegistroAcesso(login);
         }
 
-        public IEnumerable<LoginVO> RecuperarUsuariosLogin(string nome)
+        public IEnumerable<LoginVO> RecuperarUsuariosLogin(string nome, string usuarioLogin, int departamentoTipoId)
         {
-            return LoginRepository.RecuperarUsuariosLogin(nome);
+            return LoginRepository.RecuperarUsuariosLogin(nome, usuarioLogin, departamentoTipoId);
         }
     }
 }

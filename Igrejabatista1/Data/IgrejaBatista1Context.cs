@@ -27,8 +27,6 @@ public class IgrejaBatista1Context : DbContext
 
     public DbSet<PerfilTipo> PerfilTipo { get; set; }
 
-    public DbSet<PerfilLogin> PerfilLogin { get; set; }
-
     public DbSet<Saida> Saida { get; set; }
 
     public DbSet<SaidaDadosVO> SaidaVO { get; set; }
@@ -38,6 +36,8 @@ public class IgrejaBatista1Context : DbContext
     public DbSet<CadastroPatrimonio> CadastroPatrimonio { get; set; }
 
     public DbSet<RegistroAcesso> RegistroAcesso { get; set; }
+
+    public DbSet<CargoCadastroMembro> CargoCadastroMembro { get; set; }
 
     public DbSet<Cargos> Cargos { get; set; }
 

@@ -63,15 +63,28 @@
                 </div>
             </div>
             <div class="row mb-3">
+                <label class="col text-black">Data de Registro:</label>
+                <div class="col-sm-10">
+                    @if (Model.DataCriacao.ToString() != "01/01/0001 00:00:00")
+                    {
+                        <input type="date" asp-for="DataCriacao" class="form-control w-50" id="dataBaixa" />
+                    }
+                    else
+                    {
+                        <input type="date" asp-format="dd/MM/yyyy" asp-for="DataCriacao" class="form-control w-50" id="dataBaixa" />
+                    }
+                </div>
+            </div>
+            <div class="row mb-3">
                 <label class="col text-black">Data da Baixa:</label>
                 <div class="col-sm-10">
                     @if (Model.DataBaixa.ToString() != "01/01/0001 00:00:00")
                     {
-                        <input type="date" asp-for="DataBaixa" class="form-control w-50" required id="dataBaixa" />     
+                        <input type="date" asp-for="DataBaixa" class="form-control w-50" id="dataBaixa" />     
                     }
                     else
                     {
-                        <input type="date" asp-format="dd/MM/yyyy" asp-for="DataBaixa" class="form-control w-50" required id="dataBaixa" />
+                        <input type="date" asp-format="dd/MM/yyyy" asp-for="DataBaixa" class="form-control w-50" id="dataBaixa" />
                     }
                 </div>
             </div>
@@ -79,13 +92,6 @@
                 <label class="col text-black">Foto:</label>
                 <div class="col-sm-10">
                     <input type="file" asp-for="Imagem" class="form-control" id="imagem" />
-
-                    @if (!string.IsNullOrEmpty(ViewBag.Mensagem))
-                    {
-                        <div class="mb-3">
-                            <label id="mensagemErro" style="color:red; text-align:center; font-size:14px;">@ViewBag.Mensagem</label>
-                        </div>
-                    }
                 </div>
             </div>
             <div class="btn-group float-end" role="group">

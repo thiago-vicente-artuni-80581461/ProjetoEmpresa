@@ -1,21 +1,25 @@
 ﻿using IgrejaBatista1.Models;
 using IgrejaBatista1.Models.Services;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace IgrejaBatista1.Controllers
 {
+    [Authorize]
     public class CadastroController : Controller
     {
         private readonly ICadastroMembroService _cadastroMembroService;
         private readonly IloginService _loginService;
+        private readonly IEntradaService _entradaService;
 
-        public CadastroController(ICadastroMembroService cadastroMembroService, IloginService loginService)
+        public CadastroController(ICadastroMembroService cadastroMembroService, IloginService loginService, IEntradaService entradaService  )
         {
             _cadastroMembroService = cadastroMembroService;
             _loginService = loginService;
+            _entradaService = entradaService;
         }
 
         [HttpGet]
@@ -23,7 +27,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -47,7 +51,7 @@ namespace IgrejaBatista1.Controllers
                     data = Convert.ToDateTime(dataBatismo);
                     lista = lista.Where(d => d.DataBatismo.Date == data).ToList();
                 }
-
+              
                 return View(lista);
             }
             catch (ValidationException)
@@ -61,7 +65,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -81,11 +85,11 @@ namespace IgrejaBatista1.Controllers
         }
 
         [HttpPost]
-        public IActionResult SalvarCadastro(CadastroMembro cadastroMembro)
+        public IActionResult SalvarCadastro(CadastroMembrosVO cadastroMembro)
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -106,7 +110,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -115,6 +119,16 @@ namespace IgrejaBatista1.Controllers
 
                 var lista = _cadastroMembroService.RecuperarListaMembros();
                 var registro = lista.FirstOrDefault(th => th.Id == Id);
+
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                int perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
+
+                var verificarEntrada = _entradaService.VerificarEntradaMembro(Id);
+
+                if (verificarEntrada != null)
+                {
+                    return Json(new { sucesso = false, mensagem = "Erro ao excluir o registro, pois, está relacionado com outros registros do sistema!!!" });
+                }
 
                 if (registro != null)
                 {
@@ -129,11 +143,12 @@ namespace IgrejaBatista1.Controllers
                         NomeCompleto = registro.NomeCompleto,
                         NomeMae = registro.NomeMae,
                         NomePai = registro.NomePai,
-                        RG = registro.RG
+                        RG = registro.RG,
+                        Ativo = registro.Ativo
                     };
                     _cadastroMembroService.ExcluirCadastroMembro(vo);
                 }
-                return Json(true);
+                return Json(new { sucesso = true});
             }
             catch (ValidationException)
             {
@@ -146,19 +161,20 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
-                var lista = _cadastroMembroService.RecuperarListaMembros();
-                var registro = lista.FirstOrDefault(th => th.Id == id);
+                var registro = _cadastroMembroService.RecuperarListaMembros().FirstOrDefault(th => th.Id == id);
+
+                var recuperarListaCargo = _cadastroMembroService.RecuperarCargosCadastroMembro(id);
 
                 CadastroMembrosVO vo = new CadastroMembrosVO()
                 {
                     Id = registro.Id,
-                    CargoId = registro.CargoId,
+                    CargoId = recuperarListaCargo,
                     CPF = registro.CPF,
                     DataBatismo = registro.DataBatismo,
                     DataEmissao = registro.DataEmissao,
@@ -166,8 +182,10 @@ namespace IgrejaBatista1.Controllers
                     NomeCompleto = registro.NomeCompleto,
                     NomeMae = registro.NomeMae,
                     NomePai = registro.NomePai,
-                    RG = registro.RG
+                    RG = registro.RG,
+                    Ativo = registro.Ativo
                 };
+
                 vo.Cargo = _cadastroMembroService.RecuperarListaCargos();
 
                 return View(vo);
@@ -184,16 +202,16 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                ViewBag.DepartamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                ViewBag.DepartamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
 
-                var lista = _loginService.RecuperarUsuariosLogin(nome);
+                var lista = _loginService.RecuperarUsuariosLogin(nome, User.Identity.Name, ViewBag.DepartamentoTipoId);
                 return View(lista);
             }
             catch (ValidationException)
@@ -206,7 +224,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -232,7 +250,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {

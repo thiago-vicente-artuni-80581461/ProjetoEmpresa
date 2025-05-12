@@ -1,12 +1,15 @@
-﻿using IgrejaBatista1.Models;
+﻿
+using IgrejaBatista1.Models;
 using IgrejaBatista1.Models.Services;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace IgrejaBatista1.Controllers
 {
+    [Authorize]
     public class EntradasController : Controller
     {
         private readonly IEntradaService _entradaService;
@@ -21,18 +24,18 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
 
-                perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
 
                 IEnumerable<EntradaVO> entrada = null;
-                entrada = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, mes, ano, membro).ToList();
+                entrada = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, mes, ano, membro, User.Identity.Name).ToList();
 
                 return View(entrada);
             }
@@ -51,15 +54,15 @@ namespace IgrejaBatista1.Controllers
             {
                 EntradaVO entrada = new EntradaVO();
 
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
 
                 entrada.CadastroMembro = _entradaService.RecuperarDadosCadastroMembro();
 
@@ -67,7 +70,8 @@ namespace IgrejaBatista1.Controllers
 
                 entrada.Evento = _entradaService.RecuperarDadosEvento();
 
-                entrada.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);
+                entrada.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(User.Identity.Name, departamentoTipoId);
+
                 entrada.PerfilId = perfilId;
 
                 if (Id != 0)
@@ -96,12 +100,14 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
+                entrada.UsuarioLogin = User.Identity.Name;
+                entrada.PerfilTipo = User.FindFirst("PerfilTipo")?.Value;
 
                 _entradaService.SalvarEntrada(entrada);
                 return RedirectToAction("Index", "Entradas");
@@ -118,16 +124,17 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, null, null, null);
+                perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+
+                var lista = _entradaService.RecuperarListaEntrada(perfilId, departamentoTipoId, null, null, null, null);
 
                 var registro = lista.FirstOrDefault(th => th.Id == Id);
 

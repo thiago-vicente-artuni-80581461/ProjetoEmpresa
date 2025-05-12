@@ -1,14 +1,13 @@
-﻿using IgrejaBatista1.Models;
-using IgrejaBatista1.Models.Services;
+﻿using IgrejaBatista1.Models.Services;
 using IgrejaBatista1.Models.ValueObjects;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
-using Microsoft.Identity.Client;
+using Microsoft.IdentityModel.Tokens;
+using NuGet.Common;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
-using System.Web;
-using Microsoft.AspNetCore;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace IgrejaBatista1.Controllers
 {
@@ -41,11 +40,11 @@ namespace IgrejaBatista1.Controllers
             {
                 throw;
             }
-           
+
         }
 
         [HttpPost]
-        public IActionResult Logar(LoginVO login)
+        public async Task<IActionResult> Logar(LoginVO login)
         {
             try
             {
@@ -55,18 +54,40 @@ namespace IgrejaBatista1.Controllers
                 {
                     var recuperarPefilLogin = LoginService.RecuperarLoginPerfil(login.LoginUsuario);
 
-                    HttpContext.Session.SetString("Perfil", recuperarPefilLogin.Id.ToString());
+                    var claims = new[]
+                       {
+                          new Claim(ClaimTypes.Name, login.LoginUsuario),
+                          new Claim("Perfil", recuperarPefilLogin.Id.ToString()),
+                          new Claim("DepartamentoTipoId",  recuperarPefilLogin.DepartamentoTipoId.ToString() == "0" ? "1" : recuperarPefilLogin.DepartamentoTipoId.ToString()),
+                          new Claim("PerfilTipo",  recuperarPefilLogin.PerfilTipo)
+                      };
 
-                    HttpContext.Session.SetString("DepartamentoTipoId", recuperarPefilLogin.DepartamentoTipoId.ToString());
+                    var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("L+H57jscLmFhbncdg2BxzKq/WPqOqaQzKsXYu0aL7gA="));
 
-                    HttpContext.Session.SetString(SessionNome, login.LoginUsuario);
+                    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+                    var tok = new JwtSecurityToken(
+                        claims: claims,
+                        expires: DateTime.UtcNow.AddHours(1),
+                        signingCredentials: creds
+                    );
+
+                    var token = new JwtSecurityTokenHandler().WriteToken(tok);
+
+                    Response.Cookies.Append("jwtToken", token, new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Secure = true,
+                        SameSite = SameSiteMode.Lax,
+                        Expires = DateTimeOffset.UtcNow.AddHours(1)
+                    });
 
                     LoginService.SalvarRegistroAcesso(login);
 
                     return RedirectToAction("Index", "Home");
                 }
                 var mensagem = "Usuário e/ou senha inválidos!!! Por favor, tente novamente!!!";
-          
+
                 return RedirectToAction("Login", "Login", new { mensagem });
             }
             catch (ValidationException)

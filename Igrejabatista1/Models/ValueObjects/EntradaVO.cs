@@ -15,6 +15,8 @@ namespace IgrejaBatista1.Models.ValueObjects
         public int PerfilId { get; set; }
         public int? Mes { get; set; }
         public int? Ano { get; set; }
+
+        public string UsuarioLogin { get; set; }
         public IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ListaTipo { get; set; }
 
         public IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> Evento { get; set; }
@@ -30,5 +32,7 @@ namespace IgrejaBatista1.Models.ValueObjects
         public string EventoDescricao { get; set; }
 
         public string DepartamentoTipoDescricao { get; set; }
+
+        public string PerfilTipo { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using IgrejaBatista1.Data;
 using IgrejaBatista1.Models.ValueObjects;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -17,7 +18,7 @@ namespace IgrejaBatista1.Models.Repository
         }
         public IEnumerable<SelectListItem> RecuperarDadosCadastroMembro()
         {
-            var cadastroMembro = _context.CadastroMembro.ToList();
+            var cadastroMembro = _context.CadastroMembro.Where(th => th.Ativo == true).ToList();
             List<SelectListItem> Membros = new List<SelectListItem>();
 
             SelectListItem l = new SelectListItem
@@ -41,14 +42,16 @@ namespace IgrejaBatista1.Models.Repository
             return Membros.ToList();
         }
 
-        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro)
+        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro, string usuarioLogin)
         {
             return (from e in _context.Entrada
                     join d in _context.DepartamentoTipo on e.DepartamentoTipoId equals d.Id
+                    from p in _context.Perfil.Where(ma => ma.Id == e.PerfilId).DefaultIfEmpty()
+                    from l in _context.Login.Where(ma => ma.Id == p.LoginId).DefaultIfEmpty()
                     from t in _context.Tipo.Where(ma => ma.Id == e.TipoId).DefaultIfEmpty()
                     from c in _context.CadastroMembro.Where(cm => cm.Id == e.MembroId).DefaultIfEmpty()
                     from v in _context.Evento.Where(ma => ma.Id == e.EventoId).DefaultIfEmpty()
-                    where (departamentoTipoId == 1 || (e.PerfilId == perfilId && e.DepartamentoTipoId == departamentoTipoId) ) &&
+                    where (departamentoTipoId == 1 || (l.LoginUsuario == usuarioLogin)) &&
                           (mes == null || e.Mes == mes) &&
                           (ano == null || e.Ano == ano) &&
                           (string.IsNullOrEmpty(membro) || c.NomeCompleto.Contains(membro))
@@ -118,6 +121,12 @@ namespace IgrejaBatista1.Models.Repository
 
         public void SalvarEntrada(EntradaVO entradaVO)
         {
+            int recuperarPerfil = 0;
+            if (!entradaVO.PerfilTipo.Equals("Administrador"))
+            {
+                recuperarPerfil = RecuperarPerfilCorreto(entradaVO.UsuarioLogin, entradaVO.DepartamentoTipoId);
+            }
+
             Entrada entrada = new Entrada
             {
                 Id = entradaVO.Id,
@@ -127,7 +136,7 @@ namespace IgrejaBatista1.Models.Repository
                 EventoId = entradaVO.EventoId == 0 ? null : entradaVO.EventoId,
                 ValorTotal = entradaVO.ValorTotal,
                 DepartamentoTipoId = entradaVO.DepartamentoTipoId,
-                PerfilId = entradaVO.PerfilId,
+                PerfilId = recuperarPerfil == 0 ? 1 : recuperarPerfil,
                 Mes = entradaVO.Mes,
                 Ano = entradaVO.Ano
             };
@@ -143,14 +152,15 @@ namespace IgrejaBatista1.Models.Repository
             _context.SaveChanges();
         }
 
-        public IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(int perfilId, int departamentoId)
+        public IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(string usuarioLogin, int departamentoId)
         {
 
             var tipo = (from d in _context.DepartamentoTipo
-                        join p in _context.Perfil on d.Id equals p.DepartamentoTipoId
-                        where (departamentoId == 1 || (p.Id == perfilId && p.DepartamentoTipoId == departamentoId))
-                        select d).ToList();
-
+                        from p in _context.Perfil.Where(th => th.DepartamentoTipoId == d.Id).DefaultIfEmpty()
+                        from lo in _context.Login.Where(th => th.Id == p.LoginId).DefaultIfEmpty()
+                        where (departamentoId == 1 || (lo.LoginUsuario == usuarioLogin))
+                        select d).Distinct().ToList();
+         
             List<SelectListItem> tipos = new List<SelectListItem>();
 
             SelectListItem l = new SelectListItem
@@ -185,6 +195,24 @@ namespace IgrejaBatista1.Models.Repository
 
             _context.Remove(entrada);
             _context.SaveChanges();
+        }
+
+        public Entrada VerificarEntradaMembro(int id)
+        {
+            return _context.Entrada.Where(th => th.MembroId == id).FirstOrDefault();
+        }
+
+        public int RecuperarPerfilCorreto(string usuarioLogin, int departamentoId)
+        {
+            var recuperarPerfil = (from p in _context.Perfil
+                                   join l in _context.Login on p.LoginId equals l.Id
+                                   where l.LoginUsuario == usuarioLogin && p.DepartamentoTipoId == departamentoId
+                                   select new Perfil
+                                   {
+                                       Id = p.Id
+                                   }).FirstOrDefault();
+
+            return recuperarPerfil.Id;
         }
 
     }

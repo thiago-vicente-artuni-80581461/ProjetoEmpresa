@@ -49,5 +49,8 @@ namespace IgrejaBatista1.Models
 
         [Column("CargoId")]
         public int? CargoId { get; set; }
+
+        [Column("Ativo")]
+        public bool Ativo { get; set; }
     }
 }

@@ -18,5 +18,8 @@ namespace IgrejaBatista1.Models
 
         [Column("DataCriacao")]
         public DateTime DataCriacao { get; set; }
+
+        [Column("LoginId")]
+        public int LoginId { get; set; }
     }
 }

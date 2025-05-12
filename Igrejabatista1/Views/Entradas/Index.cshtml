@@ -47,58 +47,59 @@
         </div>
     </div>
     <br />
-    <table class="custom-table">
-        <thead>
-            <tr>
-                <th scope="col">Membro</th>
-                <th scope="col">Mês</th>
-                <th scope="col">Ano</th>
-                <th scope="col">Tipo do Departamento</th>
-                <th scope="col">Tipo de Contribuição</th>
-                <th scope="col">Evento</th>
-                <th scope="col">Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
                 <tr>
-                    <td>
-                        @item.MembroCadastroDescricao
-                    </td>
-                    <td>
-                        @item.Mes
-                    </td>
-                    <td>
-                        @item.Ano
-                    </td>
-                    <td>
-                        @item.DepartamentoTipoDescricao
-                    </td>
-                    <td>
-                        @item.TipoDescricao
-                    </td>
-                    <td>
-                        @item.EventoDescricao
-                    </td>
-                    <td>
-                        @item.ValorTotal.ToString("C")
-                    </td>
-                    <td>
-                        <a asp-action="CadastroEntrada" asp-controller="Entradas" class="btn btn-success" asp-route-id="@item.Id">
-                            <i class="fas fa-edit">Editar</i>
-                        </a>
-                    </td>
-                    <td>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerEntrada(@item.Id)">
-                            Excluir
-                        </button>
-                    </td>
+                    <th scope="col">Membro</th>
+                    <th scope="col">Mês</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">Tipo do Departamento</th>
+                    <th scope="col">Tipo de Contribuição</th>
+                    <th scope="col">Evento</th>
+                    <th scope="col">Total</th>
                 </tr>
-            }
-
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td data-label="Membro">
+                            @item.MembroCadastroDescricao
+                        </td>
+                        <td data-label="Mês">
+                            @item.Mes
+                        </td>
+                        <td data-label="Ano">
+                            @item.Ano
+                        </td>
+                        <td data-label="Tipo do Departamento">
+                            @item.DepartamentoTipoDescricao
+                        </td>
+                        <td data-label="Tipo de Contribuição">
+                            @item.TipoDescricao
+                        </td>
+                        <td data-label="Evento">
+                            @item.EventoDescricao
+                        </td>
+                        <td data-label="Total">
+                            @item.ValorTotal.ToString("C")
+                        </td>
+                        <td data-label="Editar">
+                            <a asp-action="CadastroEntrada" asp-controller="Entradas" class="btn btn-success" asp-route-id="@item.Id">
+                                <i class="fas fa-edit">Editar</i>
+                            </a>
+                        </td>
+                        <td data-label="Excluir">
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerEntrada(@item.Id)">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
     <div class="col-lg-12" style="text-align: left;">
         <a asp-action="Index" asp-controller="Home" role="button" style="margin-left:5px;" class="btn btn-dark">Voltar</a>
     </div>

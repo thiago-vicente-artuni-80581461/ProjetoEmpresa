@@ -8,10 +8,13 @@ namespace IgrejaBatista1.Models.Services
         void ExcluirEntrada(EntradaVO registro);
         IEnumerable<SelectListItem> RecuperarDadosCadastroMembro();
         IEnumerable<SelectListItem> RecuperarDadosContribuicaoTipo();
-        IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(int perfilId, int departamentoId);
+        IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(string usuarioLogin, int departamentoId);
         IEnumerable<SelectListItem> RecuperarDadosEvento();
         Entrada RecuperarInformacoesEntrada(int id);
-        IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro);
+        IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro, string usuarioLogin);
         void SalvarEntrada(EntradaVO entrada);
+        Entrada VerificarEntradaMembro(int id);
+
+        int RecuperarPerfilCorreto(string usuarioLogin, int departamentoId);
     }
 }

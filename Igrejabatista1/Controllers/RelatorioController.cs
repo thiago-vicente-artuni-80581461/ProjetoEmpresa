@@ -4,8 +4,10 @@ using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Spreadsheet;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 namespace IgrejaBatista1.Controllers
 {
+    [Authorize]
     public class RelatorioController : Controller
     {
         private readonly ICaixaService _caixaService;
@@ -16,7 +18,7 @@ namespace IgrejaBatista1.Controllers
         [HttpGet]
         public IActionResult Index(int? mes = null, int? ano = null)
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+            ViewData["Nome"] = User.Identity.Name;
 
             if (ViewData["Nome"] == null)
             {
@@ -30,15 +32,15 @@ namespace IgrejaBatista1.Controllers
         public IActionResult GerarRelatorioCaixa(int? mes = null, int? ano = null) {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _caixaService.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano).ToList();
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                var lista = _caixaService.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano, User.Identity.Name).ToList();
 
                 using (var workbook = new XLWorkbook())
                 {
@@ -79,7 +81,7 @@ namespace IgrejaBatista1.Controllers
         [HttpGet]
         public IActionResult IndexEntrada(int? mes = null, int? ano = null)
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+            ViewData["Nome"] = User.Identity.Name;
 
             if (ViewData["Nome"] == null)
             {
@@ -95,15 +97,15 @@ namespace IgrejaBatista1.Controllers
             try
             {
 
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _caixaService.RecuperarListaEntradaRelatorio(departamentoTipoId, mes, ano).ToList();
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                var lista = _caixaService.RecuperarListaEntradaRelatorio(departamentoTipoId, mes, ano, User.Identity.Name).ToList();
 
                 using (var workbook = new XLWorkbook())
                 {
@@ -143,7 +145,7 @@ namespace IgrejaBatista1.Controllers
         [HttpGet]
         public IActionResult IndexSaidaRelatorio(int? mes = null, int? ano = null)
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+            ViewData["Nome"] = User.Identity.Name;
 
             if (ViewData["Nome"] == null)
             {
@@ -158,15 +160,15 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _caixaService.RecuperarListaSaidaRelatorio(departamentoTipoId, mes, ano).ToList();
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                var lista = _caixaService.RecuperarListaSaidaRelatorio(departamentoTipoId, mes, ano, User.Identity.Name).ToList();
 
                 using (var workbook = new XLWorkbook())
                 {

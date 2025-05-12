@@ -61,20 +61,24 @@
             <div class="row mb-3">
                 <label class="col text-black">Cargo:</label>
                 <div class="col-sm-10">
-                    <select asp-for="CargoId" id="cargo" class="form-control w-50">
-
-                        @foreach (var rol in Model.Cargo)
-                        {
-                            if (Model.CargoId.ToString() == rol.Value)
-                            {
-                                <option value="@rol.Value" selected>@rol.Text</option>
-                            }
-                            else
-                            {
-                                <option value="@rol.Value">@rol.Text</option>
-                            }
-                        }
+                    <select asp-for="CargoId" asp-items="Model.Cargo" multiple="multiple" id="cargo" class="form-control w-50 select2">
                     </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col text-black">Ativo:</label>
+                <div class="col-sm-10">
+                    <input id="ativo" asp-for="Ativo" type="checkbox" />
+                    <label id="labelAtivo" asp-for="Ativo">
+                        @if (Model.Ativo)
+                        {
+                            <strong>Sim</strong>
+                        }
+                        else
+                        {
+                            <strong>Não</strong>
+                        }
+                    </label>
                 </div>
             </div>
             <div class="btn-group float-end" role="group">
@@ -94,6 +98,23 @@
 </footer>
 
 <script Script>
+     $(document).ready(function(){
+        const checkbox = document.getElementById('ativo');
+        const label = document.getElementById('labelAtivo');
+
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+             label.innerHTML = '<strong>Sim</strong>';
+          } else {
+             label.innerHTML = '<strong>Não</strong>';
+          }
+        });
+
+         $('.select2').select2({
+            placeholder: "--Selecione--"
+        });
+     })
+
     function limparCampos(){
         $("#nome").val("");
         $("#dataNascimento").val("");
@@ -102,5 +123,17 @@
         $("#nomeMae").val("");
         $("#nomePai").val("");
         $("#dataBatismo").val("");
+        $("#cargo").val(0);
     }
+
+
+     IMask(document.getElementById('cpf'), {
+                mask:[
+                    {
+                        mask: '000.000.000-00',
+                        maxLength: 11
+                    }
+                ]
+            }
+     );
 </script>

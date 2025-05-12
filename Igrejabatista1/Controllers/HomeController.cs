@@ -1,18 +1,17 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using IgrejaBatista1.Models;
 using IgrejaBatista1.Models.Services;
-using IgrejaBatista1.Models.ValueObjects;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace IgrejaBatista1.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly IloginService _loginService;
 
+   
     public HomeController(ILogger<HomeController> logger, IloginService loginService)
     {
         _logger = logger;
@@ -24,7 +23,8 @@ public class HomeController : Controller
     {
         try
         {
-            ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+           
+            ViewData["Nome"] = User.Identity.Name;
 
             if (ViewData["Nome"] == null)
             {

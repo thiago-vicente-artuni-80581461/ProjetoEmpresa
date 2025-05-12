@@ -40,65 +40,78 @@
         </div>
     </div>
     <br />
-    <table class="custom-table">
-        <thead>
-            <tr>
-                <th scope="col">Tipo do Departamento</th>
-                <th scope="col">Código</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Setor</th>
-                <th scope="col">Data da Baixa</th>
-                <th scope="col">Foto</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
                 <tr>
-                    <td>
-                        @item.DepartamentoDescricao
-                    </td>
-                    <td>
-                        @item.Codigo
-                    </td>
-                    <td>
-                        @item.Nome
-                    </td>
-                    <td>
-                        @item.Descricao
-                    </td>
-                    <td>
-                        @item.Setor
-                    </td>
-                    <td>
-                        @item.DataBaixa.ToString("dd/MM/yyyy")
-                    </td>
-                    <td>
-                        @if (!string.IsNullOrEmpty(item.Foto))
-                        {
-                            <img id="image" class="thumbnail" src="@Url.Action("Imagem", "Patrimonio", new { imagemGuid = item.Foto })" width="60" height="60" />
-                        }
-                        else
-                        {
-                            <p>Sem imagem</p>
-                        }
-                    </td>
-                    <td>
-                        <a asp-action="CadastroPatrimonio" asp-controller="Patrimonio" class="btn btn-success" asp-route-id="@item.Id">
-                            <i class="fas fa-edit">Editar</i>
-                        </a>
-                    </td>
-                    <td>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerEntrada(@item.Id)">
-                            Excluir
-                        </button>
-                    </td>
+                    <th scope="col">Tipo do Departamento</th>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Setor</th>
+                    <th scope="col">Data de Registro</th>
+                    <th scope="col">Data da Baixa</th>
+                    <th scope="col">Foto</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td data-label="Tipo do Departamento">
+                            @item.DepartamentoDescricao
+                        </td>
+                        <td data-label="Código">
+                            @item.Codigo
+                        </td>
+                        <td data-label="Nome">
+                            @item.Nome
+                        </td>
+                        <td data-label="Descricao">
+                            @item.Descricao
+                        </td>
+                        <td data-label="Setor">
+                            @item.Setor
+                        </td>
+                        <td data-label="Data de Registro">
+                            @item.DataCriacao.ToString("dd/MM/yyyy") 
+                        </td>
+                        <td data-label="Data da Baixa">
+                            @if (@item.DataBaixa.HasValue)
+                            {
+                                @item.DataBaixa.Value.ToString("dd/MM/yyyy")
+                            }
+                            else
+                            {
+                                <p></p>
+                            }
+                        </td>
+                        <td data-label="Foto">
+                            @if (!string.IsNullOrEmpty(item.Foto) && !item.Foto.Equals("Sem Foto"))
+                            {
+                                <img class="thumbnail image-thumb" src="@Url.Action("Imagem", "Patrimonio", new { imagemGuid = item.Foto })" width="60" height="60" alt="Imagem do patrimônio" />
+                            }
+                            else
+                            {
+                                <p>Sem Foto</p>
+                            }
+                        </td>
+                        <td data-label="Editar">
+                            <a asp-action="CadastroPatrimonio" asp-controller="Patrimonio" class="btn btn-success" asp-route-id="@item.Id">
+                                <i class="fas fa-edit">Editar</i>
+                            </a>
+                        </td>
+                        <td data-label="Excluir">
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerPatrimonio(@item.Id)">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                }
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
     <div class="col-lg-12" style="text-align: left;">
         <a asp-action="Index" asp-controller="Home" role="button" style="margin-left:5px;" class="btn btn-dark">Voltar</a>
     </div>
@@ -115,7 +128,7 @@
                     Tem certeza da remoção desse registro?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="ExcluirEntrada()">Sim</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="ExcluirPatrimonio()">Sim</button>
                     <button type="button" onclick="fecharModal()" class="btn btn-primary">Não</button>
                 </div>
             </div>
@@ -139,29 +152,58 @@
     }
 
     $(document).ready(function () {
-       // Obtendo o modal e a imagem
         var modal = document.getElementById("myModal");
         var modalImage = document.getElementById("modalImage");
-        var image = document.getElementById("image");
         var closeModal = document.getElementById("closeModal");
 
-        // Quando o usuário clicar na imagem, abre o modal com a imagem ampliada
-        image.onclick = function() {
-            modal.style.display = "block"; // Exibe o modal
-            modalImage.src = this.src;    // Define a imagem ampliada no modal
-        }
+           $(".image-thumb").click(function () {
+        var modal = document.getElementById("myModal");
+        var modalImage = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImage.src = this.src;
+       });
 
-        // Quando o usuário clicar no 'x' (fechar), o modal será fechado
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-        }
+         closeModal.onclick = function () {
+           modal.style.display = "none";
+         };
 
-        // Fechar o modal se o usuário clicar fora da imagem ampliada
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+         window.onclick = function (event) {
+             if (event.target == modal) {
+                 modal.style.display = "none";
+             }
+         };
     });
+
+    function removerPatrimonio(id){
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        myModal.show();
+        $("#idExclusao").val(id);
+    }
+
+    function ExcluirPatrimonio(){
+        var excluir = $("#idExclusao").val();
+          $.ajax({
+                url: '/Patrimonio/RemoverPatrimonio?Id=' + excluir,
+                type: 'POST',
+                success: function(resposta) {
+                    if(resposta){
+                      location.reload();
+                      $('.modal').modal('hide');
+                      $('body').removeClass('modal-open');
+                      $('.modal-backdrop').remove();
+
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Erro: " + error);
+                }
+            });
+    }
+
+     function fecharModal() {
+          $('.modal').modal('hide');
+          $('body').removeClass('modal-open');
+          $('.modal-backdrop').remove();
+    }
 </script>
 

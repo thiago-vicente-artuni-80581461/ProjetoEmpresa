@@ -42,17 +42,17 @@ namespace IgrejaBatista1.Models.Repository
             return retorno;
         }
 
-        public Perfil RecuperarLoginPerfil(string loginUsuario)
+        public PerfilVO RecuperarLoginPerfil(string loginUsuario)
         {
             return (from pt in _context.PerfilTipo
              join p in _context.Perfil on pt.Id equals p.TipoPerfilId
-             join pl in _context.PerfilLogin on p.Id equals pl.PerfilId
-             join l in _context.Login on pl.LoginId equals l.Id
+             join l in _context.Login on p.LoginId equals l.Id
              where l.LoginUsuario == loginUsuario
-             select new Perfil
+             select new PerfilVO
              {
-                 Id = pl.PerfilId,
-                 DepartamentoTipoId = p.DepartamentoTipoId
+                 Id = p.Id,
+                 DepartamentoTipoId = p.DepartamentoTipoId,
+                 PerfilTipo = pt.Nome
              }).FirstOrDefault();     
         }
 
@@ -71,13 +71,13 @@ namespace IgrejaBatista1.Models.Repository
             _context.SaveChanges();
         }
 
-        public IEnumerable<LoginVO> RecuperarUsuariosLogin(string nome)
+        public IEnumerable<LoginVO> RecuperarUsuariosLogin(string nome, string usuarioLogin, int departamentoTipoId)
         {
-            return (from pt in _context.PerfilTipo
-                    join p in _context.Perfil on pt.Id equals p.TipoPerfilId
-                    join pl in _context.PerfilLogin on p.Id equals pl.PerfilId
-                    join l in _context.Login on pl.LoginId equals l.Id
-                    where l.LoginUsuario.Contains(nome)
+           var query = (from pt in _context.PerfilTipo
+                        from p in _context.Perfil.Where(ma => ma.TipoPerfilId == pt.Id).DefaultIfEmpty()
+                        from l in _context.Login.Where(ma => ma.Id == p.LoginId).DefaultIfEmpty()
+                        from d in _context.DepartamentoTipo.Where(ma => ma.Id == p.DepartamentoTipoId).DefaultIfEmpty()
+                    where (departamentoTipoId == 1 || (string.IsNullOrEmpty(nome) || l.LoginUsuario.Contains(nome)) || l.LoginUsuario == usuarioLogin)
                     select new LoginVO
                     {
                         Id = l.Id,
@@ -85,7 +85,24 @@ namespace IgrejaBatista1.Models.Repository
                         PerfilLogin = pt.Nome,
                         Senha = l.Senha,
                         PerfilTipoId = pt.Id
-                    }).ToList();
+                    }).Distinct().ToList();
+
+            foreach (var item in query)
+            {
+                var perfil = (from p in _context.Perfil 
+                              join dp in _context.DepartamentoTipo on p.DepartamentoTipoId equals dp.Id
+                              where p.LoginId == item.Id
+                              select new LoginVO
+                              {
+                                  DepartamentoTipoDescricao = dp.Nome
+                              }).ToList();
+
+                foreach (var i in perfil)
+                {
+                    item.DepartamentoTipoDescricao += i.DepartamentoTipoDescricao + "; ";
+                }
+            }
+            return query;
         }
     }
 }

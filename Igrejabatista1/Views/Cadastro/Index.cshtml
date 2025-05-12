@@ -46,62 +46,74 @@
         </div>
     </div>
     <br />
-    <table class="custom-table">
-        <thead>
-            <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Data de nascimento</th>
-                <th scope="col">CPF</th>
-                <th scope="col">RG</th>
-                <th scope="col">Nome da mãe</th>
-                <th scope="col">Nome do pai</th>
-                <th scope="col">Data de Batismo</th>
-                <th scope="col">Cargo</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
                 <tr>
-                    <td>
-                        @item.NomeCompleto
-                    </td>
-                    <td>
-                        @item.DataNascimento.ToString("dd/MM/yyyy")
-                    </td>
-                    <td>
-                        @item.CPF
-                    </td>
-                    <td>
-                        @item.RG
-                    </td>
-                    <td>
-                        @item.NomeMae
-                    </td>
-                    <td>
-                        @item.NomePai
-                    </td>
-                    <td>
-                        @item.DataBatismo.ToString("dd/MM/yyyy")
-                    </td>
-                    <td>
-                        @item.CargoNome
-                    </td>
-                    <td>
-                        <a asp-action="EditarCadastroMembro" asp-controller="Cadastro" class="btn btn-success" asp-route-id="@item.Id">
-                            <i class="fas fa-edit">Editar</i>
-                        </a>
-                    </td>
-                    <td>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerMembro(@item.Id)">
-                            Excluir
-                        </button>
-                    </td>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col" style="width:150px !important;">CPF</th>
+                    <th scope="col">RG</th>
+                    <th scope="col">Nome da Mãe</th>
+                    <th scope="col">Nome do Pai</th>
+                    <th scope="col">Data de Batismo</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Ativo</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td data-label="Nome">
+                            @item.NomeCompleto
+                        </td>
+                        <td data-label="Data de Nascimento">
+                            @item.DataNascimento.ToString("dd/MM/yyyy")
+                        </td>
+                        <td data-label="CPF">
+                            @item.CPF
+                        </td>
+                        <td data-label="RG">
+                            @item.RG
+                        </td>
+                        <td data-label="Nome da Mãe">
+                            @item.NomeMae
+                        </td>
+                        <td data-label="Nome do Pai">
+                            @item.NomePai
+                        </td>
+                        <td data-label="Data de Batismo">
+                            @item.DataBatismo.ToString("dd/MM/yyyy")
+                        </td>
+                        <td data-label="Cargo">
+                            @item.CargoNome
+                        </td>
+                        <td data-label="Ativo">
+                            @if(item.Ativo == true)       
+                            {
+                                <p>Sim</p>
+                            }
+                            else{
+                                <p>Não</p>
+                            }
+                        </td>
+                        <td data-label="Editar">
+                            <a asp-action="EditarCadastroMembro" asp-controller="Cadastro" class="btn btn-success" asp-route-id="@item.Id">
+                                <i class="fas fa-edit">Editar</i>
+                            </a>
+                        </td>
+                        <td data-label="Excluir">
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerMembro(@item.Id)">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                }
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 
     <div class="col-lg-12" style="text-align: left;">
         <a asp-action="Index" asp-controller="Home" role="button" class="btn btn-dark" style="margin-left:5px;">Voltar</a>
@@ -120,6 +132,22 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="ExcluirMembro()">Sim</button>
                     <button type="button" onclick="fecharModal()" class="btn btn-primary">Não</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalMensagem" tabindex="-1" aria-labelledby="modalMensagemLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMensagemLabel">Atenção!!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Erro ao excluir o registro, pois, está relacionado com outros registros do sistema!!!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="fecharModal()" class="btn btn-primary">OK</button>
                 </div>
             </div>
         </div>
@@ -155,13 +183,19 @@
                 url: '/Cadastro/RemoverMembro?Id=' + excluir,
                 type: 'POST',
                 success: function(resposta) {
-                    if(resposta){
-                      location.reload();
-                      $('.modal').modal('hide');
-                      $('body').removeClass('modal-open');
-                      $('.modal-backdrop').remove();
-
-                    }
+                  if (resposta.sucesso == false) {
+                       if (resposta.mensagem.trim() !== '') {
+                          $("#modalMensagemTexto").text(resposta.mensagem);
+                          var modal = new bootstrap.Modal(document.getElementById('modalMensagem'));
+                          modal.show();
+                        }
+                  }
+                  if(resposta.sucesso){
+                    location.reload();
+                    $('.modal').modal('hide');
+                    $('body').removeClass('modal-open');
+                    $('.modal-backdrop').remove();
+                  }
                 },
                 error: function(xhr, status, error) {
                     console.log("Erro: " + error);

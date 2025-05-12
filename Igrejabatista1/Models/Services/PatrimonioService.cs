@@ -21,5 +21,10 @@ namespace IgrejaBatista1.Models.Services
         {
             patrimonioRepository.SalvarPatrimonio(patrimonio);
         }
+
+        public void ExcluirCadastroPatrimonio(CadastroPatrimonioVO vo)
+        {
+            patrimonioRepository.ExcluirCadastroPatrimonio(vo);
+        }
     }
 }

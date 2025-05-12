@@ -16,7 +16,7 @@ namespace IgrejaBatista1.Models.Services
         {
             return _cadastroMembroRepository.RecuperarListaMembros();
         }
-        public void SalvarCadastroMembro(CadastroMembro cadastroMembro)
+        public void SalvarCadastroMembro(CadastroMembrosVO cadastroMembro)
         {
             _cadastroMembroRepository.SalvarCadastroMembro(cadastroMembro);
         }
@@ -44,6 +44,11 @@ namespace IgrejaBatista1.Models.Services
         public void SalvarCadastroUsuario(LoginVO login)
         {
             _cadastroMembroRepository.SalvarCadastroUsuario(login);
+        }
+
+        public List<string> RecuperarCargosCadastroMembro(int id)
+        {
+           return _cadastroMembroRepository.RecuperarCargosCadastroMembro(id);
         }
     }
 }

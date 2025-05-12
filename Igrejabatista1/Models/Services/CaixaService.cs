@@ -12,14 +12,14 @@ namespace IgrejaBatista1.Models.Services
             _caixaRepository = caixaRepository;
         }
 
-        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixa(int departamentoTipoId)
+        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixa(int departamentoTipoId, string usuarioLogin)
         {
-            return _caixaRepository.RecuperarListaCaixa(departamentoTipoId);
+            return _caixaRepository.RecuperarListaCaixa(departamentoTipoId, usuarioLogin);
         }
 
-        public IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida)
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaida(int departamentoTipoId, string tipoConta, string dataSaida, string usuarioLogin)
         {
-            return _caixaRepository.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
+            return _caixaRepository.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida, usuarioLogin);
         }
 
         public void SalvarSaida(SaidaVO saida)
@@ -32,19 +32,24 @@ namespace IgrejaBatista1.Models.Services
             return _caixaRepository.BuscarDadosSaida(id);
         }
 
-        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaCaixaRelatorio(int departamentoTipoId, int? mes, int? ano, string usuarioLogin)
         {
-            return _caixaRepository.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano);
+            return _caixaRepository.RecuperarListaCaixaRelatorio(departamentoTipoId, mes, ano, usuarioLogin);
         }
 
-        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaEntradaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        public IEnumerable<DepartamentoIgrejaVO> RecuperarListaEntradaRelatorio(int departamentoTipoId, int? mes, int? ano, string usuarioLogin)
         {
-            return _caixaRepository.RecuperarListaEntradaRelatorio(departamentoTipoId, mes, ano);
+            return _caixaRepository.RecuperarListaEntradaRelatorio(departamentoTipoId, mes, ano, usuarioLogin);
         }
 
-        public IEnumerable<SaidaDadosVO> RecuperarListaSaidaRelatorio(int departamentoTipoId, int? mes, int? ano)
+        public IEnumerable<SaidaDadosVO> RecuperarListaSaidaRelatorio(int departamentoTipoId, int? mes, int? ano, string usuarioLogin)
         {
-            return _caixaRepository.RecuperarListaSaidaRelatorio(departamentoTipoId, mes, ano);
+            return _caixaRepository.RecuperarListaSaidaRelatorio(departamentoTipoId, mes, ano,usuarioLogin);
+        }
+
+        public void ExcluirSaida(SaidaVO vo)
+        {
+            _caixaRepository.ExcluirSaida(vo);
         }
     }
 }

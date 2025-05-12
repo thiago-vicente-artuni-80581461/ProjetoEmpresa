@@ -31,7 +31,7 @@ namespace IgrejaBatista1.Models
         public string Setor { get; set; }
 
         [Column("DataBaixa")]
-        public DateTime DataBaixa { get; set; }
+        public DateTime? DataBaixa { get; set; }
 
         [Column("Foto")]
         [Required]

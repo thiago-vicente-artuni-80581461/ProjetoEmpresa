@@ -9,9 +9,11 @@ using System.Net.NetworkInformation;
 using NuGet.Packaging.Signing;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IgrejaBatista1.Controllers
 {
+    [Authorize]
     public class PatrimonioController : Controller
     {
 
@@ -26,21 +28,20 @@ namespace IgrejaBatista1.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(string codigo = "", string nome = "")
+        public IActionResult Index(string codigo = "", string nome = "")
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
 
-                IEnumerable<CadastroPatrimonioVO> patrimonio = null;
-                patrimonio = _patrimonioService.RecuperarListaPatrimonio(departamentoTipoId, codigo, nome).ToList();
+                IEnumerable<CadastroPatrimonioVO> patrimonio = _patrimonioService.RecuperarListaPatrimonio(departamentoTipoId, codigo, nome).ToList();
 
                 return View(patrimonio.ToList());
             }
@@ -49,7 +50,7 @@ namespace IgrejaBatista1.Controllers
 
                 throw;
             }
-          
+
         }
 
         [HttpGet]
@@ -60,20 +61,19 @@ namespace IgrejaBatista1.Controllers
             {
                 CadastroPatrimonioVO patrimonio = new CadastroPatrimonioVO();
 
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
+                int perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
 
                 ViewBag.Mensagem = mensagem;
 
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-
-                patrimonio.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);
+                patrimonio.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(User.Identity.Name, departamentoTipoId);
 
                 if (Id != 0)
                 {
@@ -87,6 +87,7 @@ namespace IgrejaBatista1.Controllers
                     patrimonio.Setor = recuperarInformacoes.Setor;
                     patrimonio.DataBaixa = recuperarInformacoes.DataBaixa;
                     patrimonio.Foto = recuperarInformacoes.Foto;
+                    patrimonio.DataCriacao = recuperarInformacoes.DataCriacao;
                 }
                 return View(patrimonio);
             }
@@ -94,7 +95,7 @@ namespace IgrejaBatista1.Controllers
             {
                 throw;
             }
-           
+
         }
 
         [HttpPost]
@@ -102,7 +103,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -137,13 +138,19 @@ namespace IgrejaBatista1.Controllers
                     return RedirectToAction("Index", "Patrimonio");
                 }
 
-                return RedirectToAction("CadastroPatrimonio", "Patrimonio", new { patrimonio.Id, mensagem = "A foto não foi carregada!!" });
+                else
+                {
+                    patrimonio.Foto = "Sem Foto";
+                   
+                }
+                _patrimonioService.SalvarPatrimonio(patrimonio);
+                return RedirectToAction("Index", "Patrimonio");
             }
             catch (ValidationException)
             {
 
                 throw;
-            }  
+            }
         }
 
         public async Task<IActionResult> Imagem(string imagemGuid)
@@ -162,7 +169,48 @@ namespace IgrejaBatista1.Controllers
 
                 throw;
             }
-           
+        }
+
+        [HttpPost]
+        public IActionResult RemoverPatrimonio(int Id)
+        {
+            try
+            {
+                ViewData["Nome"] = User.Identity.Name;
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+
+                var lista = _patrimonioService.RecuperarListaPatrimonio(departamentoTipoId, "", "");
+                var registro = lista.FirstOrDefault(th => th.Id == Id);
+
+                if (registro != null)
+                {
+                    CadastroPatrimonioVO vo = new CadastroPatrimonioVO()
+                    {
+                        Id = registro.Id,
+                        Codigo = registro.Codigo,
+                        DataBaixa = registro.DataBaixa,
+                        DataCriacao = registro.DataCriacao,
+                        DepartamentoTipoId = registro.DepartamentoTipoId,
+                        Descricao = registro.Descricao,
+                        Foto = registro.Foto,
+                        Nome = registro.Nome,
+                        Setor = registro.Setor,
+                        TamanhoFoto = registro.TamanhoFoto
+                        
+                    };
+                    _patrimonioService.ExcluirCadastroPatrimonio(vo);
+                }
+                return Json(true);
+            }
+            catch (ValidationException)
+            {
+                return RedirectToAction("SalvarCadastro", "Cadastro");
+            }
         }
     }
 }

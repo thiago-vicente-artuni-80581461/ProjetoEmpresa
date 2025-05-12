@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Components.Forms;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace IgrejaBatista1.Controllers
 {
-   
+   [Authorize]
     public class HeaderController : Controller
     {
         public HeaderController()
@@ -16,8 +17,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                var login = HttpContext.Session.GetString("Nome");
-                ViewBag.UsuarioLogin = login;
+                ViewBag.UsuarioLogin = User.Identity.Name;
                 return View();
             }
             catch (ValidationException)

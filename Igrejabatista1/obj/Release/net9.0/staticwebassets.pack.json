@@ -273,12 +273,60 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png",
+      "PackagePath": "staticwebassets\\uploads\\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\4e4dc731-af8e-4b53-b84f-6222415061c7.png",
+      "PackagePath": "staticwebassets\\uploads\\4e4dc731-af8e-4b53-b84f-6222415061c7.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\582250a0-23ff-42b1-af08-7d62b1058402.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\582250a0-23ff-42b1-af08-7d62b1058402.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg",
       "PackagePath": "staticwebassets\\uploads\\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg"
     },
     {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\7765bccb-ea38-49bd-ace2-469172e44131.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\7765bccb-ea38-49bd-ace2-469172e44131.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\9c6eeef6-f890-453d-971e-538968a4677f.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\9c6eeef6-f890-453d-971e-538968a4677f.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg",
       "PackagePath": "staticwebassets\\uploads\\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\ebf8ccb1-08be-486d-afb2-243745843740.png",
+      "PackagePath": "staticwebassets\\uploads\\ebf8ccb1-08be-486d-afb2-243745843740.png"
     },
     {
       "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.IgrejaBatista1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

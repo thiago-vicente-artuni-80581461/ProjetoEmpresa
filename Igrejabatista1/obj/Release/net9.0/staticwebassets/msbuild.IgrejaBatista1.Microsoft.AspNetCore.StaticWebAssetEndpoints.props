@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/css/site.8aa7r5o271.css">
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/css/site.8z6pb1euxv.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8aa7r5o271"},{"Name":"integrity","Value":"sha256-MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs="},{"Name":"label","Value":"_content/IgrejaBatista1/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2867"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 13:45:04 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8z6pb1euxv"},{"Name":"integrity","Value":"sha256-lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q="},{"Name":"label","Value":"_content/IgrejaBatista1/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4213"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 13:16:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2867"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 13:45:04 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4213"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 13:16:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -816,6 +816,66 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Feb 2025 14:18:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"69219"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:38:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66.wb6ezylveb.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wb6ezylveb"},{"Name":"integrity","Value":"sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"69219"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:38:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.jizpvux04y.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jizpvux04y"},{"Name":"integrity","Value":"sha256-C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"150781"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 21:10:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"150781"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 21:10:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/4e4dc731-af8e-4b53-b84f-6222415061c7.jizpvux04y.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4e4dc731-af8e-4b53-b84f-6222415061c7.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jizpvux04y"},{"Name":"integrity","Value":"sha256-C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/4e4dc731-af8e-4b53-b84f-6222415061c7.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"150781"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 21:10:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/4e4dc731-af8e-4b53-b84f-6222415061c7.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4e4dc731-af8e-4b53-b84f-6222415061c7.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"150781"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 21:10:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/582250a0-23ff-42b1-af08-7d62b1058402.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\582250a0-23ff-42b1-af08-7d62b1058402.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"199390"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00226KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:17:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/582250a0-23ff-42b1-af08-7d62b1058402.wegg033ms6.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\582250a0-23ff-42b1-af08-7d62b1058402.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wegg033ms6"},{"Name":"integrity","Value":"sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/582250a0-23ff-42b1-af08-7d62b1058402.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"199390"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00226KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:17:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/5cfbe774-b4f7-4f69-915b-822d49099200.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"199390"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00226KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:18:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/5cfbe774-b4f7-4f69-915b-822d49099200.wegg033ms6.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wegg033ms6"},{"Name":"integrity","Value":"sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/5cfbe774-b4f7-4f69-915b-822d49099200.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"199390"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00226KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:18:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/65505b4c-1ac7-471a-9444-61540f69d3ba.3039oqhfqg.jpeg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -828,6 +888,78 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"57332"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 19:01:04 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UwSl\u002BOwQXJppMQ/gCMp86xU\u002BhiuV\u002BycG/l\u002BaFiKC5cU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"177023"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022UwSl\u002BOwQXJppMQ/gCMp86xU\u002BhiuV\u002BycG/l\u002BaFiKC5cU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 10 May 2025 14:00:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c.njpc45ovd4.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"njpc45ovd4"},{"Name":"integrity","Value":"sha256-UwSl\u002BOwQXJppMQ/gCMp86xU\u002BhiuV\u002BycG/l\u002BaFiKC5cU="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"177023"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022UwSl\u002BOwQXJppMQ/gCMp86xU\u002BhiuV\u002BycG/l\u002BaFiKC5cU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 10 May 2025 14:00:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/7765bccb-ea38-49bd-ace2-469172e44131.3039oqhfqg.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\7765bccb-ea38-49bd-ace2-469172e44131.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3039oqhfqg"},{"Name":"integrity","Value":"sha256-jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/7765bccb-ea38-49bd-ace2-469172e44131.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"57332"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:22:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/7765bccb-ea38-49bd-ace2-469172e44131.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\7765bccb-ea38-49bd-ace2-469172e44131.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"57332"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:22:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"173865"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 14:34:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/89a72a37-dfd5-47a9-bf47-0668437bef77.vcsctaiic6.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vcsctaiic6"},{"Name":"integrity","Value":"sha256-j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"173865"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 14:34:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af.b9xvz1p8mp.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"b9xvz1p8mp"},{"Name":"integrity","Value":"sha256-H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"61541"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q=\u0022"},{"Name":"Last-Modified","Value":"Sat, 10 May 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"61541"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q=\u0022"},{"Name":"Last-Modified","Value":"Sat, 10 May 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/9c6eeef6-f890-453d-971e-538968a4677f.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\9c6eeef6-f890-453d-971e-538968a4677f.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"199390"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00226KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:38:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/9c6eeef6-f890-453d-971e-538968a4677f.wegg033ms6.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\9c6eeef6-f890-453d-971e-538968a4677f.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wegg033ms6"},{"Name":"integrity","Value":"sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/9c6eeef6-f890-453d-971e-538968a4677f.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"199390"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00226KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:38:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/be0a460e-40dd-4530-a93c-db69d7870c91.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"69219"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:38:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/be0a460e-40dd-4530-a93c-db69d7870c91.wb6ezylveb.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wb6ezylveb"},{"Name":"integrity","Value":"sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/be0a460e-40dd-4530-a93c-db69d7870c91.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"69219"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 14:38:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/e7865654-751b-45c4-83c3-466dd387b1f7.jpeg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -839,6 +971,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vwi5q2h9rl"},{"Name":"integrity","Value":"sha256-AR89gS4AekPgdNZjesYCHpHhYLxdm1XZ0oYBO/ghkj4="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/e7865654-751b-45c4-83c3-466dd387b1f7.jpeg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"58351"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022AR89gS4AekPgdNZjesYCHpHhYLxdm1XZ0oYBO/ghkj4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 14:55:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/ebf8ccb1-08be-486d-afb2-243745843740.jizpvux04y.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ebf8ccb1-08be-486d-afb2-243745843740.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jizpvux04y"},{"Name":"integrity","Value":"sha256-C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="},{"Name":"label","Value":"_content/IgrejaBatista1/uploads/ebf8ccb1-08be-486d-afb2-243745843740.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"150781"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 21:11:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/IgrejaBatista1/uploads/ebf8ccb1-08be-486d-afb2-243745843740.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ebf8ccb1-08be-486d-afb2-243745843740.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"150781"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022C0fJ1z\u002BK6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 21:11:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

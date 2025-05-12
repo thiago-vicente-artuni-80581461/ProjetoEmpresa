@@ -13,10 +13,12 @@ namespace IgrejaBatista1.Models.ValueObjects
         public string NomePai { get; set; }
         public DateTime DataBatismo { get; set; }
         public DateTime DataEmissao { get; set; }
-        public int? CargoId { get; set; }
+        public List<string> CargoId { get; set; }
         public IEnumerable<SelectListItem> Cargo { get; set; }
 
         public string CargoNome { get; set; }
+
+        public bool Ativo {get; set; }
         
 
     }

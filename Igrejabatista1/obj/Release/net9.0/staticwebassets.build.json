@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IwNld+0Xps0aDyV9t00EVzpyoa8b3Eohql6X+fLoxew=",
+  "Hash": "guDO7+gz/S+RZFHAJyzhYrIpbOhT3KyLU2bsaTTwQQM=",
   "Source": "IgrejaBatista1",
   "BasePath": "_content/IgrejaBatista1",
   "Mode": "Default",
@@ -1802,12 +1802,12 @@
       "OriginalItemSpec": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8aa7r5o271.gz",
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8z6pb1euxv.gz",
       "SourceId": "IgrejaBatista1",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\",
       "BasePath": "_content/IgrejaBatista1",
-      "RelativePath": "css/site#[.{fingerprint=8aa7r5o271}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=8z6pb1euxv}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1816,8 +1816,8 @@
       "RelatedAsset": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "yk1ez1xqn1",
-      "Integrity": "gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU=",
+      "Fingerprint": "0swi38v180",
+      "Integrity": "kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\css\\site.css"
@@ -4084,8 +4084,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8aa7r5o271",
-      "Integrity": "MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=",
+      "Fingerprint": "8z6pb1euxv",
+      "Integrity": "lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -5477,6 +5477,111 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wb6ezylveb",
+      "Integrity": "jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jizpvux04y",
+      "Integrity": "C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\4e4dc731-af8e-4b53-b84f-6222415061c7.png",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/4e4dc731-af8e-4b53-b84f-6222415061c7#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jizpvux04y",
+      "Integrity": "C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4e4dc731-af8e-4b53-b84f-6222415061c7.png"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\582250a0-23ff-42b1-af08-7d62b1058402.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/582250a0-23ff-42b1-af08-7d62b1058402#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wegg033ms6",
+      "Integrity": "6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\582250a0-23ff-42b1-af08-7d62b1058402.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/5cfbe774-b4f7-4f69-915b-822d49099200#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wegg033ms6",
+      "Integrity": "6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg",
       "SourceId": "IgrejaBatista1",
       "SourceType": "Discovered",
@@ -5498,6 +5603,132 @@
       "OriginalItemSpec": "wwwroot\\uploads\\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "njpc45ovd4",
+      "Integrity": "UwSl+OwQXJppMQ/gCMp86xU+hiuV+ycG/l+aFiKC5cU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\7765bccb-ea38-49bd-ace2-469172e44131.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/7765bccb-ea38-49bd-ace2-469172e44131#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3039oqhfqg",
+      "Integrity": "jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\7765bccb-ea38-49bd-ace2-469172e44131.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/89a72a37-dfd5-47a9-bf47-0668437bef77#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vcsctaiic6",
+      "Integrity": "j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b9xvz1p8mp",
+      "Integrity": "H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\9c6eeef6-f890-453d-971e-538968a4677f.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/9c6eeef6-f890-453d-971e-538968a4677f#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wegg033ms6",
+      "Integrity": "6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9c6eeef6-f890-453d-971e-538968a4677f.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/be0a460e-40dd-4530-a93c-db69d7870c91#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wb6ezylveb",
+      "Integrity": "jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg",
       "SourceId": "IgrejaBatista1",
       "SourceType": "Discovered",
@@ -5517,17 +5748,38 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\ebf8ccb1-08be-486d-afb2-243745843740.png",
+      "SourceId": "IgrejaBatista1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\",
+      "BasePath": "_content/IgrejaBatista1",
+      "RelativePath": "uploads/ebf8ccb1-08be-486d-afb2-243745843740#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jizpvux04y",
+      "Integrity": "C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ebf8ccb1-08be-486d-afb2-243745843740.png"
     }
   ],
   "Endpoints": [
     {
-      "Route": "css/site.8aa7r5o271.css",
-      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8aa7r5o271.gz",
+      "Route": "css/site.8z6pb1euxv.css",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8z6pb1euxv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001135073780"
+          "Quality": "0.000813669650"
         }
       ],
       "ResponseHeaders": [
@@ -5537,15 +5789,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "880"
+          "Value": "1228"
         },
         {
           "Name": "ETag",
-          "Value": "\"gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU=\""
+          "Value": "\"kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:45:04 GMT"
+          "Value": "Tue, 06 May 2025 13:16:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5565,13 +5817,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=\""
+          "Value": "W/\"lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8aa7r5o271"
+          "Value": "8z6pb1euxv"
         },
         {
           "Name": "label",
@@ -5579,12 +5831,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs="
+          "Value": "sha256-lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q="
         }
       ]
     },
     {
-      "Route": "css/site.8aa7r5o271.css",
+      "Route": "css/site.8z6pb1euxv.css",
       "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5594,7 +5846,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2867"
+          "Value": "4213"
         },
         {
           "Name": "Content-Type",
@@ -5602,11 +5854,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=\""
+          "Value": "\"lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:45:04 GMT"
+          "Value": "Tue, 06 May 2025 13:16:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5616,7 +5868,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8aa7r5o271"
+          "Value": "8z6pb1euxv"
         },
         {
           "Name": "label",
@@ -5624,13 +5876,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs="
+          "Value": "sha256-lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q="
         }
       ]
     },
     {
-      "Route": "css/site.8aa7r5o271.css.gz",
-      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8aa7r5o271.gz",
+      "Route": "css/site.8z6pb1euxv.css.gz",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8z6pb1euxv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5639,7 +5891,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "880"
+          "Value": "1228"
         },
         {
           "Name": "Content-Type",
@@ -5647,11 +5899,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU=\""
+          "Value": "\"kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:45:04 GMT"
+          "Value": "Tue, 06 May 2025 13:16:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5669,7 +5921,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8aa7r5o271"
+          "Value": "8z6pb1euxv"
         },
         {
           "Name": "label",
@@ -5677,7 +5929,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU="
+          "Value": "sha256-kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU="
         }
       ]
     },
@@ -5720,12 +5972,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8aa7r5o271.gz",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8z6pb1euxv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001135073780"
+          "Quality": "0.000813669650"
         }
       ],
       "ResponseHeaders": [
@@ -5735,15 +5987,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "880"
+          "Value": "1228"
         },
         {
           "Name": "ETag",
-          "Value": "\"gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU=\""
+          "Value": "\"kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:45:04 GMT"
+          "Value": "Tue, 06 May 2025 13:16:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5763,13 +6015,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=\""
+          "Value": "W/\"lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs="
+          "Value": "sha256-lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q="
         }
       ]
     },
@@ -5784,7 +6036,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2867"
+          "Value": "4213"
         },
         {
           "Name": "Content-Type",
@@ -5792,11 +6044,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs=\""
+          "Value": "\"lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:45:04 GMT"
+          "Value": "Tue, 06 May 2025 13:16:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5806,13 +6058,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MKEwlQjfFMPaoQnVoJtPBCwMPvBs/rOtK9pHOZN8zWs="
+          "Value": "sha256-lN4Rfu8f1qoFeneVAvFC5L6GwAhMFJn5zZ7D2FGib/Q="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8aa7r5o271.gz",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\obj\\Release\\net9.0\\compressed\\6pf721k90r-8z6pb1euxv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5821,7 +6073,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "880"
+          "Value": "1228"
         },
         {
           "Name": "Content-Type",
@@ -5829,11 +6081,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU=\""
+          "Value": "\"kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:45:04 GMT"
+          "Value": "Tue, 06 May 2025 13:16:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5851,7 +6103,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gjY0KhFq08AHtjL+a+X5luBYbhK+58H50k/zHidJnAU="
+          "Value": "sha256-kFYnr+YQp6X+Mji4SgBsFdvfrq2namnfWIKzS8wiwnU="
         }
       ]
     },
@@ -36297,6 +36549,416 @@
       ]
     },
     {
+      "Route": "uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "69219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:38:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66.wb6ezylveb.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "69219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:38:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wb6ezylveb"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/1f1f58d3-16b1-4104-b0e3-b40f05901d66.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.jizpvux04y.png",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "150781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 21:10:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jizpvux04y"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\2bd4b3ec-df0a-4075-a6d2-a92a8bd09473.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "150781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 21:10:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4e4dc731-af8e-4b53-b84f-6222415061c7.jizpvux04y.png",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\4e4dc731-af8e-4b53-b84f-6222415061c7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "150781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 21:10:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jizpvux04y"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4e4dc731-af8e-4b53-b84f-6222415061c7.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4e4dc731-af8e-4b53-b84f-6222415061c7.png",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\4e4dc731-af8e-4b53-b84f-6222415061c7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "150781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 21:10:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/582250a0-23ff-42b1-af08-7d62b1058402.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\582250a0-23ff-42b1-af08-7d62b1058402.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:17:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/582250a0-23ff-42b1-af08-7d62b1058402.wegg033ms6.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\582250a0-23ff-42b1-af08-7d62b1058402.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:17:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wegg033ms6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/582250a0-23ff-42b1-af08-7d62b1058402.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5cfbe774-b4f7-4f69-915b-822d49099200.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:18:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5cfbe774-b4f7-4f69-915b-822d49099200.wegg033ms6.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\5cfbe774-b4f7-4f69-915b-822d49099200.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:18:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wegg033ms6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/5cfbe774-b4f7-4f69-915b-822d49099200.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="
+        }
+      ]
+    },
+    {
       "Route": "uploads/65505b4c-1ac7-471a-9444-61540f69d3ba.3039oqhfqg.jpeg",
       "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\65505b4c-1ac7-471a-9444-61540f69d3ba.jpeg",
       "Selectors": [],
@@ -36379,6 +37041,498 @@
       ]
     },
     {
+      "Route": "uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "177023"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UwSl+OwQXJppMQ/gCMp86xU+hiuV+ycG/l+aFiKC5cU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 14:00:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UwSl+OwQXJppMQ/gCMp86xU+hiuV+ycG/l+aFiKC5cU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c.njpc45ovd4.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "177023"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UwSl+OwQXJppMQ/gCMp86xU+hiuV+ycG/l+aFiKC5cU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 14:00:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "njpc45ovd4"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/70c175b3-e7a0-4428-bc7b-d27d623e228c.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UwSl+OwQXJppMQ/gCMp86xU+hiuV+ycG/l+aFiKC5cU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/7765bccb-ea38-49bd-ace2-469172e44131.3039oqhfqg.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\7765bccb-ea38-49bd-ace2-469172e44131.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3039oqhfqg"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/7765bccb-ea38-49bd-ace2-469172e44131.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/7765bccb-ea38-49bd-ace2-469172e44131.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\7765bccb-ea38-49bd-ace2-469172e44131.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:22:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jfiN8lFP1NCeYgolyj8r0V/aX0Q6its8UDZ9V5WLnM8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 14:34:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/89a72a37-dfd5-47a9-bf47-0668437bef77.vcsctaiic6.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 14:34:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vcsctaiic6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/89a72a37-dfd5-47a9-bf47-0668437bef77.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j1/u5Ukv74kekEYywStz5KFqxAfXF8/ZreKh53RCdG0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af.b9xvz1p8mp.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "61541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b9xvz1p8mp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\89b6b2ba-5bb2-4acc-9769-23c327fbe6af.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "61541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H/HGEs4CSTAfBdgAKKUZhgykyCTqOr0oGkrjPp9095Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/9c6eeef6-f890-453d-971e-538968a4677f.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\9c6eeef6-f890-453d-971e-538968a4677f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:38:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/9c6eeef6-f890-453d-971e-538968a4677f.wegg033ms6.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\9c6eeef6-f890-453d-971e-538968a4677f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:38:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wegg033ms6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/9c6eeef6-f890-453d-971e-538968a4677f.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6KwZhPthAaGJVyQeGCYZoEPVcHxtdQ03nuhjAvHKRy0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/be0a460e-40dd-4530-a93c-db69d7870c91.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "69219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:38:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/be0a460e-40dd-4530-a93c-db69d7870c91.wb6ezylveb.jpeg",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\be0a460e-40dd-4530-a93c-db69d7870c91.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "69219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 14:38:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wb6ezylveb"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/be0a460e-40dd-4530-a93c-db69d7870c91.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jPIUa2TyJz1fpqgxe6KgmitbrSfIShHit5nL8kcwBNY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/e7865654-751b-45c4-83c3-466dd387b1f7.jpeg",
       "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\e7865654-751b-45c4-83c3-466dd387b1f7.jpeg",
       "Selectors": [],
@@ -36457,6 +37611,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-AR89gS4AekPgdNZjesYCHpHhYLxdm1XZ0oYBO/ghkj4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ebf8ccb1-08be-486d-afb2-243745843740.jizpvux04y.png",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\ebf8ccb1-08be-486d-afb2-243745843740.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "150781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 21:11:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jizpvux04y"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ebf8ccb1-08be-486d-afb2-243745843740.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ebf8ccb1-08be-486d-afb2-243745843740.png",
+      "AssetFile": "C:\\Users\\Usuario\\source\\repos\\ProjetoEmpresa\\Igrejabatista1\\wwwroot\\uploads\\ebf8ccb1-08be-486d-afb2-243745843740.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "150781"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 21:11:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C0fJ1z+K6t0dflsyiu0eVe6TUVejlKp4ENt/zM65JiU="
         }
       ]
     }

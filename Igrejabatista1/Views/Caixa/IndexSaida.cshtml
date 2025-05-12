@@ -18,73 +18,75 @@
 <body>
     <div class="container">
         <div class="conteudo">
-        <form asp-action="IndexSaida" asp-controller="Caixa" method="get">
-            <div class="row mb-3">
-                <label class="col text-black">Tipo de Conta:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control w-50" name="tipoConta" id="tipoConta">
+            <form asp-action="IndexSaida" asp-controller="Caixa" method="get">
+                <div class="row mb-3">
+                    <label class="col text-black">Tipo de Conta:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control w-50" name="tipoConta" id="tipoConta">
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col text-black">Data de Saída:</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control w-50" name="dataSaida" id="dataSaida">
+                <div class="row mb-3">
+                    <label class="col text-black">Data de Saída:</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control w-50" name="dataSaida" id="dataSaida">
+                    </div>
                 </div>
-            </div>
-            <div class="btn-group float-end" role="group">
-                <input type="submit" class="btn btn-dark" value="Pesquisar" />
-                <button style="margin-left:10px;" onclick="LimparCampos()" class="btn btn-dark">Limpar</button>
-            </div>
-        </form>
+                <div class="btn-group float-end" role="group">
+                    <input type="submit" class="btn btn-dark" value="Pesquisar" />
+                    <button style="margin-left:10px;" onclick="LimparCampos()" class="btn btn-dark">Limpar</button>
+                </div>
+            </form>
         </div>
     </div>
-    <br/>
-    <table class="custom-table">
-        <thead>
-            <tr>
-                <th scope="col">Tipo do Departamento</th>
-                <th scope="col">Tipo de Conta</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Data de Saída</th>
-                <th scope="col">Valor Pago</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <br />
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
                 <tr>
-                    <td>
-                        @item.DepartamentoTipoDescricao
-                    </td>
-                    <td>
-                        @item.TipoConta
-                    </td>
-
-                    <td>
-                        @item.Descricao
-                    </td>
-
-                    <td>
-                        @item.DataSaida.ToString("dd/MM/yyyy")
-                    </td>
-                    <td>
-                        @item.ValorPago.ToString("C")
-                    </td>
-                    <td>
-                        <a asp-action="CadastroSaida" asp-controller="Caixa" class="btn btn-success" asp-route-id="@item.Id">
-                            <i class="fas fa-edit">Editar</i>
-                        </a>
-                    </td>
-                    <td>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerSaida(@item.Id)">
-                            Excluir
-                        </button>
-                    </td>
+                    <th scope="col">Tipo do Departamento</th>
+                    <th scope="col">Tipo de Conta</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Data de Saída</th>
+                    <th scope="col">Valor Pago</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td data-label="Tipo do Departamento">
+                            @item.DepartamentoTipoDescricao
+                        </td>
+                        <td data-label="Tipo de Conta">
+                            @item.TipoConta
+                        </td>
 
-        </tbody>
-    </table>
+                        <td data-label="Descrição">
+                            @item.Descricao
+                        </td>
+
+                        <td data-label="Data de Saída">
+                            @item.DataSaida.ToString("dd/MM/yyyy")
+                        </td>
+                        <td data-label="Valor Pago">
+                            @item.ValorPago.ToString("C")
+                        </td>
+                        <td data-label="Editar">
+                            <a asp-action="CadastroSaida" asp-controller="Caixa" class="btn btn-success" asp-route-id="@item.Id">
+                                <i class="fas fa-edit">Editar</i>
+                            </a>
+                        </td>
+                        <td data-label="Excluir">
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="removerSaida(@item.Id)">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
     <div class="col-lg-12" style="text-align: left;">
         <a asp-action="Index" asp-controller="Home" role="button" style="margin-left:5px;" class="btn btn-dark">Voltar</a>
     </div>
@@ -131,7 +133,7 @@
       function ExcluirSaida(){
         var excluir = $("#idExclusao").val();
           $.ajax({
-                url: '/Entradas/RemoverEntrada?Id=' + excluir,
+                url: '/Caixa/RemoverSaida?Id=' + excluir,
                 type: 'POST',
                 success: function(resposta) {
                     if(resposta){

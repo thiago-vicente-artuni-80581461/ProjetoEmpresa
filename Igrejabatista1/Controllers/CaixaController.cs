@@ -1,17 +1,19 @@
 ﻿using IgrejaBatista1.Models;
 using IgrejaBatista1.Models.Services;
 using IgrejaBatista1.Models.ValueObjects;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace IgrejaBatista1.Controllers
 {
+    [Authorize]
     public class CaixaController : Controller
     {
         private readonly ICaixaService _caixaService;
         private readonly IEntradaService _entradaService;
-
+      
         public CaixaController(ICaixaService caixaService, IEntradaService entradaService)
         {
             _caixaService = caixaService;
@@ -23,15 +25,15 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _caixaService.RecuperarListaCaixa(departamentoTipoId);
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                var lista = _caixaService.RecuperarListaCaixa(departamentoTipoId, User.Identity.Name);
 
                 return View(lista);
             }
@@ -47,16 +49,16 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
                     return RedirectToAction("Login", "Login");
                 }
 
-                int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida);
+                int perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, tipoConta, dataSaida, User.Identity.Name);
 
                 return View(lista);
             }
@@ -73,7 +75,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -81,9 +83,9 @@ namespace IgrejaBatista1.Controllers
                 }
 
                 SaidaVO saida = new SaidaVO();
-                int perfilId = Convert.ToInt32(HttpContext.Session.GetString("Perfil"));
-                int departamentoTipoId = Convert.ToInt32(HttpContext.Session.GetString("DepartamentoTipoId"));
-                saida.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(perfilId, departamentoTipoId);
+                int perfilId = int.Parse(User.FindFirst("Perfil")?.Value);
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+                saida.DepartamentoTipo = _entradaService.RecuperarDadosDepartamentoTipo(User.Identity.Name, departamentoTipoId);
 
                 if (Id != 0)
                 {
@@ -113,7 +115,7 @@ namespace IgrejaBatista1.Controllers
         {
             try
             {
-                ViewData["Nome"] = HttpContext.Session.GetString("Nome");
+                ViewData["Nome"] = User.Identity.Name;
 
                 if (ViewData["Nome"] == null)
                 {
@@ -127,8 +129,48 @@ namespace IgrejaBatista1.Controllers
             catch (ValidationException)
             {
                 throw;
+            }       
+        }
+
+
+        [HttpPost]
+        public IActionResult RemoverSaida(int Id)
+        {
+            try
+            {
+                ViewData["Nome"] = User.Identity.Name;
+
+                if (ViewData["Nome"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+                int departamentoTipoId = int.Parse(User.FindFirst("DepartamentoTipoId")?.Value);
+
+                var lista = _caixaService.RecuperarListaSaida(departamentoTipoId, "", "", User.Identity.Name);
+
+                var registro = lista.FirstOrDefault(th => th.Id == Id);
+
+                if (registro != null)
+                {
+                    SaidaVO vo = new SaidaVO()
+                    {
+                        Id = registro.Id,
+                        DataCriacao = registro.DataCriacao,
+                        DataSaida = registro.DataSaida,
+                        DepartamentoTipoId = registro.DepartamentoTipoId,
+                        Descricao = registro.Descricao,
+                        TipoConta = registro.TipoConta,
+                        ValorPago = registro.ValorPago
+
+                    };
+                    _caixaService.ExcluirSaida(vo);
+                }
+                return Json(true);
             }
-          
+            catch (ValidationException)
+            {
+                return RedirectToAction("SalvarCadastro", "Cadastro");
+            }
         }
     }
 }

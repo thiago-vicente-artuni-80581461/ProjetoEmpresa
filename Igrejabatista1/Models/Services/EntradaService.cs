@@ -16,9 +16,9 @@ namespace IgrejaBatista1.Models.Services
             return _entradaRepository.RecuperarDadosCadastroMembro();
         }
 
-        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro)
+        public IEnumerable<EntradaVO> RecuperarListaEntrada(int perfilId, int departamentoTipoId, int? mes, int? ano, string membro, string usuarioLogin)
         {
-            return _entradaRepository.RecuperarListaEntrada(perfilId, departamentoTipoId, mes, ano, membro);
+            return _entradaRepository.RecuperarListaEntrada(perfilId, departamentoTipoId, mes, ano, membro, usuarioLogin);
         }
 
         public IEnumerable<SelectListItem> RecuperarDadosContribuicaoTipo()
@@ -35,9 +35,9 @@ namespace IgrejaBatista1.Models.Services
             _entradaRepository.SalvarEntrada(entrada);
         }
 
-        public IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(int perfilId, int departamentoId)
+        public IEnumerable<SelectListItem> RecuperarDadosDepartamentoTipo(string usuarioLogin, int departamentoId)
         {
-            return _entradaRepository.RecuperarDadosDepartamentoTipo(perfilId, departamentoId);
+            return _entradaRepository.RecuperarDadosDepartamentoTipo(usuarioLogin, departamentoId);
         }
 
         public Entrada RecuperarInformacoesEntrada(int id)
@@ -48,6 +48,16 @@ namespace IgrejaBatista1.Models.Services
         public void ExcluirEntrada(EntradaVO registro)
         {
             _entradaRepository.ExcluirEntrada(registro);
+        }
+
+        public Entrada VerificarEntradaMembro(int id)
+        {
+           return _entradaRepository.VerificarEntradaMembro(id);
+        }
+
+        public int RecuperarPerfilCorreto(string usuarioLogin, int departamentoId)
+        {
+            return _entradaRepository.RecuperarPerfilCorreto(usuarioLogin, departamentoId);
         }
     }
 }

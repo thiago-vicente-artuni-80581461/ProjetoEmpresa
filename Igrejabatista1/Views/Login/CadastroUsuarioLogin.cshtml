@@ -25,7 +25,7 @@
             <div class="row mb-3">
                 <label class="col text-black">Perfil:</label>
                 <div class="col-sm-10">
-                    <select asp-for="PerfilTipoId" id="perfilTipo" class="form-control w-50">
+                    <select asp-for="PerfilTipoId" id="perfilTipo" class="form-control w-50" onchange="perfilTipoChange(this)">
 
                         @foreach (var rol in Model.PerfilTipo)
                         {
@@ -43,21 +43,9 @@
             </div>
 
             <div class="row mb-3">
-                <label class="col text-black">Tipo de Departamento:</label>
-                <div class="col-sm-10">
-                    <select asp-for="DepartamentoTipoId" id="dTipo" class="form-control w-50">
-
-                        @foreach (var rol in Model.DepartamentoTipo)
-                        {
-                            if (Model.DepartamentoTipo.ToString() == rol.Value)
-                            {
-                                <option value="@rol.Value" selected>@rol.Text</option>
-                            }
-                            else
-                            {
-                                <option value="@rol.Value">@rol.Text</option>
-                            }
-                        }
+                <label id="labelDepartamento" class="col text-black">Tipo de Departamento:</label>
+                <div class="col-sm-10" id="dtTipoDiv">
+                    <select asp-for="DepartamentoTipoId" asp-items="Model.DepartamentoTipo" multiple="multiple" id="dtTipo" class="form-control w-50 select2">
                     </select>
                 </div>
             </div>
@@ -83,6 +71,26 @@
         $("#perfilTipo").val(0);
         $("#loginusuario").val("");
         $("#senha").val("");
+        $("#dtTipo").val(0);
     }
+    $(document).ready(function(){
+     $('.select2').select2({
+             placeholder: "--Selecione--"
+     });
+    });
 
+     function perfilTipoChange(selectElement){
+         const selectedValue = selectElement.value;
+         const tipo = document.getElementById("labelDepartamento");
+         const dtTipo = document.getElementById("dtTipoDiv");
+         if(selectedValue == 1){
+            tipo.style.display = "none";
+            dtTipo.style.display = "none";
+         }
+         else{
+            tipo.style.display = "block";
+            dtTipo.style.display = "block";
+            dtTipo.classList.add("col-sm-10");
+         }
+    }
 </script>
